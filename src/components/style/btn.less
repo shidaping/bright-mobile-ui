@@ -1,0 +1,44 @@
+@import 'var.less';
+.btn {
+  line-height: 3.8rem;
+  padding: 0 .5rem;
+  border-radius: .3rem;
+}
+.btn-full{
+  display: block;
+  width: 100%;
+}
+.btn:disabled {
+  background: #cccccc;
+  color: white;
+}
+
+.btn-red {
+  background-color: @color-red;
+  color: white;
+  border: 1px solid @color-red;
+  &:active {
+    background-color: lighten(@color-red, 10%);
+  }
+}
+
+.btn-red--reverse {
+  background-color: white;
+  color: @color-red;
+  border: 1px solid @color-red;
+}
+
+.btn-orange {
+  background-color: @color-orange;
+  color: white;
+  border: 1px solid @color-orange;
+  &:active {
+    background-color: lighten(@color-orange, 10%);
+  }
+}
+
+.btn-orange--reverse {
+  background-color: white;
+  color: @color-orange;
+  border: 1px solid @color-orange;
+}

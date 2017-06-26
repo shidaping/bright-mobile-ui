@@ -1,0 +1,57 @@
+@import './var.less';
+.form-control {
+  width: 100%;
+}
+
+input.form-control {
+  padding: 1.2rem .5rem;
+  border: 1px solid @color-input-border;
+  border-radius: .3rem;
+  &:focus {
+    border: 1px solid @color-primary;
+    box-shadow: 0rem 0rem 0.3rem 0.1rem @color-primary;
+  }
+}
+
+input.form-control.with-addon-left {
+  padding-left: 1.9rem;
+  .addon-left {
+    border-right: 1px solid @color-input-border;
+    background: #eeeeee;
+  }
+}
+
+.form-group-with-addon-left {
+  position: relative;
+  input.form-control {
+    padding-left: 2.1rem;
+  }
+  .addon-left {
+    position: absolute;
+    top: 50%;
+    left: .5rem;
+    transform: translateY(-50%);
+  }
+}
+
+.form-group-with-addon-right {
+  position: relative;
+  input.form-control {
+    padding-right: 2.1rem;
+  }
+  .addon-right {
+    position: absolute;
+    top: 50%;
+    right: .5rem;
+    transform: translateY(-50%);
+  }
+}
+
+.form-control-with-addon-left {
+  position: relative;
+}
+
+select.form-control {
+  padding: 1.2rem .5rem;
+  font-size: 1.2rem;
+}
