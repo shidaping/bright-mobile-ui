@@ -11,7 +11,7 @@ var webackConfig = {
     toast: './src/components/toast/toast.less',
   },
   output: {
-    path: './assets',
+    path: './lib',
     filename: '[name].js',
     // chunkFilename: "[id].js"
   },
