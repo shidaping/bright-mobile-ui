@@ -7,11 +7,12 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var nodeModulesDir = path.join(__dirname, 'node_modules');
 var webackConfig = {
   entry: {
-    'bright-ui': './src/components/index.js',
-    toast: './src/components/toast/toast.less',
+    'css/base': './src/components/style/index.less',
+    'css/toast': './src/components/toast/toast.less',
+    'css/loading': './src/components/loading/loading.less',
   },
   output: {
-    path: './lib',
+    path: './dist',
     filename: '[name].js',
     // chunkFilename: "[id].js"
   },
@@ -49,9 +50,9 @@ var webackConfig = {
   module: {
     noParse: ['./src/noparse/*'],
     loaders: [{
-      test: /\.js$/,
-      loaders: ['babel'],
-      exclude: /(node_modules)/,
+      // test: /\.js$/,
+      // loaders: ['babel'],
+      // exclude: /(node_modules)/,
     // }, {
     //   test: /\.less$/,
     //  css?-autoprefixer!postcss!less
@@ -59,7 +60,7 @@ var webackConfig = {
     // }, {
     //   test: /\.css$/,
     //   loader: 'style!css'
-    }, {
+    // }, {
       test: /\.less$/,
       loader: ExtractTextPlugin.extract('style', 'css?-autoprefixer!less'),
     }, {

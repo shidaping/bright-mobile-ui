@@ -37,6 +37,10 @@ class Home extends React.Component {
             <span>Dropdown下拉菜单</span>
             <i className="bui-iconfont bui-icon-angle-right" />
           </Link>
+          <Link to={'/select'}>
+            <span>Select选择</span>
+            <i className="bui-iconfont bui-icon-angle-right" />
+          </Link>
         </div>
 
       </div>
