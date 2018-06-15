@@ -12,7 +12,20 @@ module.exports={
     "object-shorthand": 0,
     "max-len": ["warn", 100],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "import/no-extraneous-dependencies": 0
+    "import/no-extraneous-dependencies": 0,
+    "jsx-a11y/no-static-element-interactions": ["warn"],
+    'jsx-a11y/no-noninteractive-element-interactions': [
+      'warn', {
+        handlers: [
+          'onClick',
+          'onMouseDown',
+          'onMouseUp',
+          'onKeyPress',
+          'onKeyDown',
+          'onKeyUp',
+        ],
+      },
+    ],
   },
   "plugins": ["import"],
   "settings": {

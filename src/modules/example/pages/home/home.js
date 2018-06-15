@@ -1,7 +1,11 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 // import { connect } from 'react-redux';
-import { Link } from 'react-router';
+import { Link, browserHistory } from 'react-router';
+import { BmuiSelect, List } from 'components';
+// import { actionAjaxGetNewsList } from '../../actions/news.js';
+import 'components/list/list.less';
+import 'components/bmui-select/bmui-select.less';
 import '../../components/iconfont/iconfont.less';
 import './home.less';
 
@@ -14,13 +18,54 @@ class Home extends React.Component {
     return (
       <div>
         <div className="home-logo-container">
-          <span className="logo">BUI</span>
+          <span className="logo">BMUI</span>
         </div>
         <div className="home-link-list">
           {/*
             <button onClick={this.props.increase}>increase</button>
             <button onClick={this.props.decrease}>decrease</button>
           */}
+          <List>
+            <List.Item
+              onClick={() => {
+                browserHistory.push('/toast');
+              }}
+              label="Toast信息提示"
+              noValue
+            />
+            <List.Item
+              onClick={() => {
+                browserHistory.push('/loading');
+              }}
+              label="Loading加载中"
+              noValue
+            />
+            <List.Item
+              onClick={() => {
+                browserHistory.push('/select');
+              }}
+              label="Select选择"
+              noValue
+            />
+            <List.Item
+              onClick={() => {
+                browserHistory.push('/date-picker');
+              }}
+              label="DatePicker日期时间选择"
+              noValue
+            />
+            <List.Item
+              onClick={() => {
+                browserHistory.push('/toast');
+              }}
+              label="toast信息提示"
+              noValue
+            />
+          </List>
+
+
+          {/*
+
           <Link to={'/toast'}>
             <span>Toast信息提示</span>
             <i className="bui-iconfont bui-icon-angle-right" />
@@ -41,6 +86,7 @@ class Home extends React.Component {
             <span>Select选择</span>
             <i className="bui-iconfont bui-icon-angle-right" />
           </Link>
+          */}
         </div>
 
       </div>

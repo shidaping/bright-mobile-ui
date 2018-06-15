@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 class Toast extends Component {
   constructor(props) {
@@ -14,6 +15,33 @@ class Toast extends Component {
         apiShow: this.apiShow,
         apiHide: this.apiHide,
       });
+    }
+  }
+  static show(children) {
+    let dom = document.getElementById('bmuiToast');
+    if (dom) {
+      document.body.removeChild(dom);
+
+    }
+    dom = document.createElement('div');
+    dom.id = 'bmuiToast';
+    document.body.appendChild(dom);
+    let apiToast;
+    ReactDOM.render(
+      <Toast
+        api={(api) => {
+          apiToast = api;
+        }}
+      >
+        {children}
+      </Toast>,
+      dom);
+    apiToast.apiShow(children);
+  }
+  static hide() {
+    let dom = document.getElementById('bmuiToast');
+    if (dom) {
+      dom.innerHtml = '';
     }
   }
   componentWillReceiveProps(nextProps) {
@@ -39,7 +67,6 @@ class Toast extends Component {
     }
     this.setState({
       show: true,
-      children: children,
     });
     this.timeout = setTimeout(() => {
       this.setState({
@@ -60,7 +87,6 @@ class Toast extends Component {
   }
 }
 Toast.propTypes = {
-  children: PropTypes.any,
   api: PropTypes.func,
   timeout: PropTypes.number,
   show: PropTypes.bool,

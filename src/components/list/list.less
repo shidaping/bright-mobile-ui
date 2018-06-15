@@ -1,0 +1,37 @@
+@import '~components/style/var.less';
+.bmui-list{
+  .bmui-list__item{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 10px;
+    border-bottom: 1px solid @color-border;
+    .col1{
+      flex: 100px 0;
+    }
+    .col2{
+      flex: 1;
+      text-align: right;
+      .placeholder{
+        color: @color-placeholder;
+      }
+    }
+    .col3{
+      height: 8px;
+      width: 8px;
+      border-top: 1px solid #999999;
+      border-right: 1px solid #999999;
+      transform: rotate(45deg);
+      position: relative;
+      top: -1px;
+    }
+    &.no-value{
+      .col1{
+        flex: 1;
+      }
+      .col2{
+        display: none;
+      }
+    }
+  }
+}

@@ -12,7 +12,7 @@ var webackConfig = {
     'css/loading': './src/components/loading/loading.less',
   },
   output: {
-    path: './dist',
+    path: path.join(__dirname, 'dist'),
     filename: '[name].js',
     // chunkFilename: "[id].js"
   },
@@ -28,7 +28,7 @@ var webackConfig = {
       // client: path.resolve('./client'),
       config: path.resolve('config'),
     },
-    modulesDirectories: [
+    modules: [
       'node_modules',
       'src',
     ],
@@ -48,7 +48,7 @@ var webackConfig = {
     ),
   ],
   module: {
-    noParse: ['./src/noparse/*'],
+    // noParse: ['./src/noparse/*'],
     loaders: [{
       // test: /\.js$/,
       // loaders: ['babel'],

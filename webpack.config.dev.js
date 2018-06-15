@@ -9,7 +9,7 @@ var webackConfig = {
     example: ['./src/modules/example/index.js', 'font-awesome.css'],
   },
   output: {
-    path: './assets',
+    // path: './assets',
     filename: '[name].js',
     publicPath: '/',
       // chunkFilename: "[id].js"
@@ -24,14 +24,14 @@ var webackConfig = {
     alias: {
       'font-awesome.css': path.resolve(nodeModulesDir, 'font-awesome/css/font-awesome.min.css'),
     },
-    modulesDirectories: [
+    modules: [
       path.join(__dirname, 'node_modules'),
       path.join(__dirname, 'src'),
     ],
     // root: [
     //   path.resolve('./src')
     // ],
-    extensions: ['', '.js', '.jsx', '.less'],
+    // extensions: ['', '.js', '.jsx', '.less'],
   },
   plugins: [
     // new webpack.optimize.CommonsChunkPlugin({ name: 'vendor' }),
@@ -41,11 +41,11 @@ var webackConfig = {
     ),
   ],
   module: {
-    noParse: ['./src/noparse/*'],
+    // noParse: ['./src/noparse/*'],
     loaders: [{
       test: /\.js$/,
-      loaders: ['babel'],
       exclude: /(node_modules)/,
+      use: ['react-hot-loader/webpack', 'babel-loader'],
       // }, {
       //   test: /\.less$/,
       //  css?-autoprefixer!postcss!less
@@ -54,11 +54,9 @@ var webackConfig = {
       //   test: /\.css$/,
       //   loader: 'style!css'
     }, {
-      test: /\.less$/,
-      loader: ExtractTextPlugin.extract('style', 'css?-autoprefixer!less'),
-    }, {
-      test: /\.css$/,
-      loader: ExtractTextPlugin.extract('style-loader', 'css-loader'),
+      test: /(\.less|\.css)$/,
+      // use: ['style-loader', 'css-loader', 'less-loader', 'postcss-loader'],
+      use: ['style-loader', 'css-loader', 'postcss-loader', 'less-loader'],
     }, {
       test: /\.jpg|\.png$/,
       loader: 'file-loader',

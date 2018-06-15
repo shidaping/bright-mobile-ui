@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { showToast } from 'modules/example/actions/toast.js';
+import { Toast } from 'components';
 // import { actionAjaxGetNewsList } from '../../actions/news.js';
 // import 'components/style/index.less';
 
@@ -25,6 +26,16 @@ class PageToast extends React.Component {
             }}
           >
             show toast
+          </button>
+        </div>
+        <div className="padding-10">
+          <button
+            className="btn btn-orange btn-full"
+            onClick={() => {
+              Toast.show('abc');
+            }}
+          >
+            static show toast
           </button>
         </div>
       </div>

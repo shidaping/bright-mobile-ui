@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { showLoading, hideLoading } from 'modules/example/actions/loading';
 // import { BmuiSelectContainer, BmuiSelectColumn } from 'components';
-import { BmuiSelect, List } from 'components';
+import { DatePicker, List } from 'components';
 // import { actionAjaxGetNewsList } from '../../actions/news.js';
 import 'components/list/list.less';
-import 'components/bmui-select/bmui-select.less';
+import 'components/date-picker/date-picker.less';
 
 
 console.log(List.Item);
@@ -26,7 +26,7 @@ const options = [
   } 
 ]
 
-class PageSelect extends React.Component {
+class PageDatePicker extends React.Component {
   constructor(props){
     super(props);
     this.state = {
@@ -42,9 +42,9 @@ class PageSelect extends React.Component {
       <div>
         <List>
           <List.Item
-            label="性别"
+            label="日期"
             onClick={() => {
-              this.apiBuiSelectApi.apiShow();
+              this.apiDatePicker.apiShow();
             }}
           >
             {map[this.state.value]}
@@ -52,13 +52,13 @@ class PageSelect extends React.Component {
           <List.Item
             label="性别"
             onClick={() => {
-              this.apiBuiSelectApi.apiShow();
+              this.apiDatePicker.apiShow();
             }}
           >
             {map[this.state.value]}
           </List.Item>
         </List>
-        <BmuiSelect
+        <DatePicker
           options={options}
           value={this.state.value}
           onChange={(value) => {
@@ -67,7 +67,7 @@ class PageSelect extends React.Component {
             });
           }}
           api={(api) => {
-            this.apiBuiSelectApi = api;
+            this.apiDatePicker = api;
           }}
         />
         {/*
@@ -83,6 +83,6 @@ class PageSelect extends React.Component {
     );
   }
 }
-PageSelect.propTypes = {
+PageDatePicker.propTypes = {
 };
-export default PageSelect;
+export default PageDatePicker;
