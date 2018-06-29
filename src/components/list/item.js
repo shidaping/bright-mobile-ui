@@ -8,6 +8,7 @@ class Item extends Component {
     this.state = {};
   }
   render() {
+    console.log(this.props.children);
     return (
       <li
         onClick={this.props.onClick}
@@ -31,13 +32,19 @@ class Item extends Component {
   }
 }
 Item.propTypes = {
+  noValue: PropTypes.bool,
   onClick: PropTypes.func,
   children: PropTypes.Node,
-  label: PropTypes.string,
+  label: PropTypes.oneOfType([
+    PropTypes.string,
+    // PropTypes.instanceOf(Date)
+    PropTypes.Node,
+  ]),
   placeholder: PropTypes.string,
   hideRight: PropTypes.bool,
 };
 Item.defaultProps = {
+  noValue: false,
   onClick: () => {},
   children: '',
   label: '名称',

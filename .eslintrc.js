@@ -8,7 +8,7 @@ module.exports={
     "prefer-arrow-callback": 0,
     "func-names": 0,
     "space-before-function-paren": [2, "never"],
-    "no-console": 0,
+    // "no-console": 0,
     "object-shorthand": 0,
     "max-len": ["warn", 100],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],

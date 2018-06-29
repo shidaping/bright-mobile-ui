@@ -56,9 +56,30 @@ class Home extends React.Component {
             />
             <List.Item
               onClick={() => {
+                browserHistory.push('/check-box');
+              }}
+              label="CheckBox复选框"
+              noValue
+            />
+            <List.Item
+              onClick={() => {
+                browserHistory.push('/radio');
+              }}
+              label="Radio单选框"
+              noValue
+            />
+            <List.Item
+              onClick={() => {
                 browserHistory.push('/toast');
               }}
               label="toast信息提示"
+              noValue
+            />
+            <List.Item
+              onClick={() => {
+                browserHistory.push('/img-slider');
+              }}
+              label="ImgSlider图片轮播器"
               noValue
             />
           </List>

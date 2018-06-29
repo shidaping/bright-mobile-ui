@@ -27,11 +27,11 @@ const options = [
 ]
 
 class PageDatePicker extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       boolShow: false,
-      value: '',
+      value: '1980-09-21 12:00:34',
     };
   }
   componentDidMount() {
@@ -47,7 +47,7 @@ class PageDatePicker extends React.Component {
               this.apiDatePicker.apiShow();
             }}
           >
-            {map[this.state.value]}
+            {this.state.value}
           </List.Item>
           <List.Item
             label="性别"

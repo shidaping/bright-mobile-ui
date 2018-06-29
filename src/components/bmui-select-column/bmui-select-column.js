@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
-// import _ from 'lodash';
+import _ from 'lodash';
 // import './bmui-select-column.less';
 
 
@@ -25,6 +25,7 @@ class BuiSelectColumn extends Component {
         index = i;
       }
     });
+    this.translateY = -(index * 30);
     this.state = {
       show: false,
       children: null,
@@ -38,7 +39,6 @@ class BuiSelectColumn extends Component {
     this.onTouchStart = this.onTouchStart.bind(this);
     this.onTouchEnd = this.onTouchEnd.bind(this);
     // this.rotate = 0;
-    this.translateY = 0;
     // if (this.props.api) {
     //   this.props.api({
     //     apiShow: this.apiShow,
@@ -63,7 +63,7 @@ class BuiSelectColumn extends Component {
     //   });
     // }
     console.log(nextProps.value);
-    if (nextProps.value !== this.state.value) {
+    if (nextProps.value !== this.state.value || !_.isEqual(nextProps.options, this.state.options)) {
       const options = nextProps.options || [];
       const value = nextProps.value;
       let index;
@@ -81,10 +81,13 @@ class BuiSelectColumn extends Component {
       // this.translateY = -(30 * index);
       // // console.log(gap);
       // domContent.style.transform = `translateY(${this.translateY}px)`;
+      console.log(index, '-------------');
+      this.translateY = -(index * 30);
       this.setState({
         selected,
         index,
         value,
+        options: nextProps.options,
       });
     }
   }
@@ -161,7 +164,7 @@ class BuiSelectColumn extends Component {
       domContent.style.transform = `translateY(${this.translateY}px)`;
       index = parseInt(Math.abs(this.translateY) / 30, 10);
     }
-    const selected = options[index];
+    const selected = options[index] || options[0];
     const value = selected[this.props.valueField];
     this.setState({
       selected,

@@ -56,6 +56,24 @@ const rootRoute = {
       ).default,
     },
     {
+      path: 'check-box',
+      component: require( // eslint-disable-line global-require
+        'modules/example/pages/page-check-box' // eslint-disable-line
+      ).default,
+    },
+    {
+      path: 'radio',
+      component: require( // eslint-disable-line global-require
+        'modules/example/pages/page-radio' // eslint-disable-line
+      ).default,
+    },
+    {
+      path: 'img-slider',
+      component: require( // eslint-disable-line global-require
+        'modules/example/pages/page-img-slider' // eslint-disable-line
+      ).default,
+    },
+    {
       path: '*',
       component: require( // eslint-disable-line global-require
         'modules/error/components/not-found.js' // eslint-disable-line

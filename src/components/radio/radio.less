@@ -1,0 +1,31 @@
+@import '~components/style/var.less';
+.bmui-radio{
+  .check{
+    display: none;
+  }
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  border: 1px solid #dddddd;
+  position: relative;
+  background: white;
+  &.active{
+    background: ;
+    border: 1px solid @color-blue;
+    .check{
+      background-color: @color-blue;
+      top: 50%;
+      left: 50%;
+      height: 10px;
+      width: 10px;
+      margin-left: -5px;
+      margin-top: -5px;
+      position: absolute;
+      border-radius: 10px;
+      display: block;
+    }
+  }
+  .content{
+    padding-left: 25px;
+  }
+}
