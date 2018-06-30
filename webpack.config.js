@@ -32,12 +32,9 @@ var webackConfig = {
       'node_modules',
       'src',
     ],
-    extensions: ['', '.js', '.jsx', '.less'],
-    root: [
-      // path.resolve('./client'),
-      // path.resolve('./node_modules'),
-      // path.resolve(__dirname, './src'),
-    ],
+    // extensions: ['.js', '.jsx', '.less'],
+    // root: [
+    // ],
   },
   plugins: [
     // new webpack.optimize.CommonsChunkPlugin({ name: 'vendor' }),
@@ -61,11 +58,11 @@ var webackConfig = {
     //   test: /\.css$/,
     //   loader: 'style!css'
     // }, {
-      test: /\.less$/,
-      loader: ExtractTextPlugin.extract('style', 'css?-autoprefixer!less'),
-    }, {
-      test: /\.css$/,
-      loader: ExtractTextPlugin.extract('style-loader', 'css-loader'),
+      test: /(\.less|\.css)$/,
+      loader: ExtractTextPlugin.extract({
+        fallback: 'style-loader',
+        use: ['css-loader', 'less-loader', 'postcss-loader'],
+      }),
     }, {
       test: /\.jpg|\.png$/,
       loader: 'file-loader',

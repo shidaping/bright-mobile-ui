@@ -6,7 +6,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var nodeModulesDir = path.join(__dirname, 'node_modules');
 var webackConfig = {
   entry: {
-    example: ['./src/modules/example/index.js', 'font-awesome.css'],
+    example: ['./src/modules/example/index.js'],
   },
   output: {
     // path: './assets',
