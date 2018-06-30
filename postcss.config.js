@@ -20,6 +20,7 @@
 //   },
 // };
 module.exports = {
+  parser: 'postcss-comment-2',
   plugins: [
     require('autoprefixer')(),
   ],

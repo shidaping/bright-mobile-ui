@@ -8,8 +8,16 @@ var nodeModulesDir = path.join(__dirname, 'node_modules');
 var webackConfig = {
   entry: {
     'css/base': './src/components/style/index.less',
-    'css/toast': './src/components/toast/toast.less',
+    'css/bmui': './src/components/style/bmui.less',
+    'css/bmui-select': './src/components/bmui-select/bmui-select.less',
+    'css/bmui-select-container': './src/components/bmui-select-container/bmui-select-container.less',
+    'css/check-box': './src/components/check-box/check-box.less',
+    'css/date-picker': './src/components/date-picker/date-picker.less',
+    'css/img-slider': './src/components/img-slider/img-slider.less',
+    'css/list': './src/components/list/list.less',
+    'css/radio': './src/components/radio/radio.less',
     'css/loading': './src/components/loading/loading.less',
+    'css/toast': './src/components/toast/toast.less',
   },
   output: {
     path: path.join(__dirname, 'dist'),
