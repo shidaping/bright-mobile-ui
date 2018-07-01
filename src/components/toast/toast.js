@@ -17,7 +17,7 @@ class Toast extends Component {
       });
     }
   }
-  static show(children) {
+  static show(children, props) {
     let dom = document.getElementById('bmuiToast');
     if (dom) {
       document.body.removeChild(dom);
@@ -76,12 +76,21 @@ class Toast extends Component {
   }
   render() {
     return (
-      <div
-        className="bui-toast" style={{
-          display: this.state.show ? 'block' : 'none',
-        }}
-      >
-        {this.props.children}
+      <div>
+        <div
+          className="bmui-mask" style={{
+            display: this.state.show && !this.props.hideMask ? 'block' : 'none',
+          }}
+        >
+          {this.props.children}
+        </div>
+        <div
+          className="bmui-toast" style={{
+            display: this.state.show ? 'block' : 'none',
+          }}
+        >
+          {this.props.children}
+        </div>
       </div>
     );
   }
@@ -90,8 +99,10 @@ Toast.propTypes = {
   api: PropTypes.func,
   timeout: PropTypes.number,
   show: PropTypes.bool,
+  hideMask: PropTypes.bool,
 };
 Toast.defaultProps = {
   timeout: 3000,
+  hideMask: false,
 };
 export default Toast;

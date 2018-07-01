@@ -82,6 +82,13 @@ class Home extends React.Component {
               label="ImgSlider图片轮播器"
               noValue
             />
+            <List.Item
+              onClick={() => {
+                browserHistory.push('/list');
+              }}
+              label="List列表"
+              noValue
+            />
           </List>
 
 
