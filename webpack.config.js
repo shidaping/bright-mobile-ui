@@ -13,6 +13,7 @@ var webackConfig = {
     'css/bmui-select-container': './src/components/bmui-select-container/bmui-select-container.less',
     'css/check-box': './src/components/check-box/check-box.less',
     'css/date-picker': './src/components/date-picker/date-picker.less',
+    'css/address-picker': './src/components/address-picker/address-picker.less',
     'css/img-slider': './src/components/img-slider/img-slider.less',
     'css/list': './src/components/list/list.less',
     'css/radio': './src/components/radio/radio.less',
