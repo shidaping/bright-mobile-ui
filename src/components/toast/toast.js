@@ -1,27 +1,12 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
+
 class Toast extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      show: false,
-      children: null,
-    };
-    this.apiShow = this.apiShow.bind(this);
-    this.apiHide = this.apiHide.bind(this);
-    if (this.props.api) {
-      this.props.api({
-        apiShow: this.apiShow,
-        apiHide: this.apiHide,
-      });
-    }
-  }
   static show(children, props) {
     let dom = document.getElementById('bmuiToast');
     if (dom) {
       document.body.removeChild(dom);
-
     }
     dom = document.createElement('div');
     dom.id = 'bmuiToast';
@@ -41,7 +26,22 @@ class Toast extends Component {
   static hide() {
     let dom = document.getElementById('bmuiToast');
     if (dom) {
-      dom.innerHtml = '';
+      dom.parentElement.removeChild(dom);
+    }
+  }
+  constructor(props) {
+    super(props);
+    this.state = {
+      show: false,
+      children: null,
+    };
+    this.apiShow = this.apiShow.bind(this);
+    this.apiHide = this.apiHide.bind(this);
+    if (this.props.api) {
+      this.props.api({
+        apiShow: this.apiShow,
+        apiHide: this.apiHide,
+      });
     }
   }
   componentWillReceiveProps(nextProps) {
@@ -78,14 +78,16 @@ class Toast extends Component {
     return (
       <div>
         <div
-          className="bmui-mask" style={{
+          className="bmui-mask transparent"
+          style={{
             display: this.state.show && !this.props.hideMask ? 'block' : 'none',
           }}
         >
           {this.props.children}
         </div>
         <div
-          className="bmui-toast" style={{
+          className="bmui-toast"
+          style={{
             display: this.state.show ? 'block' : 'none',
           }}
         >

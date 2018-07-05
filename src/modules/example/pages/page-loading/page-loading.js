@@ -3,9 +3,11 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { showLoading, hideLoading } from 'modules/example/actions/loading';
 // import { actionAjaxGetNewsList } from '../../actions/news.js';
+import { Loading } from 'components';
+import 'components/loading/loading.less';
 
 class PageLoading extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
   }
   componentDidMount() {
@@ -27,6 +29,18 @@ class PageLoading extends React.Component {
             }}
           >
             show toast
+          </button>
+          <button
+            style={{ marginTop: '10px' }}
+            className="btn btn-orange btn-full"
+            onClick={() => {
+              Loading.show();
+              setTimeout(() => {
+                Loading.hide();
+              }, 2000);
+            }}
+          >
+            static show loading
           </button>
         </div>
       </div>

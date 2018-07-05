@@ -17,7 +17,7 @@ class BuiSelectColumn extends Component {
     // }
     const options = props.options || [];
     const value = props.value;
-    let index;
+    let index = 0;
     let selected;
     options.forEach((item, i) => {
       if (item[props.valueField] === value) {
@@ -66,7 +66,7 @@ class BuiSelectColumn extends Component {
     if (nextProps.value !== this.state.value || !_.isEqual(nextProps.options, this.state.options)) {
       const options = nextProps.options || [];
       const value = nextProps.value;
-      let index;
+      let index = 0;
       let selected;
       options.forEach((item, i) => {
         if (item[nextProps.valueField] === value) {
@@ -112,6 +112,7 @@ class BuiSelectColumn extends Component {
     // console.log('---------');
   }
   onTouchMove(e) {
+    console.log('asdfsdafasd');
     let domThis = ReactDOM.findDOMNode(this);
     let domContent = domThis.querySelector('.bmui-select-column__content');
     domContent.style.transition = '';
@@ -171,7 +172,7 @@ class BuiSelectColumn extends Component {
       value,
       index: index,
     });
-    this.props.onChange(value);
+    this.props.onChange(value, selected);
     // console.log(this.state.options[index]);
   }
   render() {

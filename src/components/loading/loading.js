@@ -1,7 +1,34 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import ReactDOM from 'react-dom';
 
 class Loading extends Component {
+  static show(children) {
+    let dom = document.getElementById('bmuiLoading');
+    if (dom) {
+      document.body.removeChild(dom);
+    }
+    dom = document.createElement('div');
+    dom.id = 'bmuiLoading';
+    document.body.appendChild(dom);
+    let apiToast;
+    ReactDOM.render(
+      <Loading
+        api={(api) => {
+          apiToast = api;
+        }}
+      >
+        {children}
+      </Loading>,
+      dom);
+    apiToast.apiShow(children);
+  }
+  static hide() {
+    let dom = document.getElementById('bmuiLoading');
+    if (dom) {
+      dom.parentElement.removeChild(dom);
+    }
+  }
   constructor(props) {
     super(props);
     this.state = {

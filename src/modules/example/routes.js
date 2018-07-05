@@ -56,6 +56,12 @@ const rootRoute = {
       ).default,
     },
     {
+      path: 'address-picker',
+      component: require( // eslint-disable-line global-require
+        'modules/example/pages/page-address-picker' // eslint-disable-line
+      ).default,
+    },
+    {
       path: 'check-box',
       component: require( // eslint-disable-line global-require
         'modules/example/pages/page-check-box' // eslint-disable-line
