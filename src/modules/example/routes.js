@@ -38,6 +38,12 @@ const rootRoute = {
       ).default,
     },
     {
+      path: 'confirm',
+      component: require( // eslint-disable-line global-require
+        'modules/example/pages/page-confirm' // eslint-disable-line
+      ).default,
+    },
+    {
       path: 'form',
       component: require( // eslint-disable-line global-require
         'modules/example/pages/page-form' // eslint-disable-line
@@ -71,6 +77,12 @@ const rootRoute = {
       path: 'radio',
       component: require( // eslint-disable-line global-require
         'modules/example/pages/page-radio' // eslint-disable-line
+      ).default,
+    },
+    {
+      path: 'switch',
+      component: require( // eslint-disable-line global-require
+        'modules/example/pages/page-switch' // eslint-disable-line
       ).default,
     },
     {

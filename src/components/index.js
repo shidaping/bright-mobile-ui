@@ -10,9 +10,11 @@ import CheckBox from './check-box';
 import Radio from './radio';
 import ImgSlider from './img-slider';
 import AddressPicker from './address-picker';
+import Switch from './switch';
+import BmuiConfirm from './bmui-confirm';
 
 
-export { Blank, Toast, Loading, BmuiSelectContainer, BmuiSelectColumn, BmuiSelect, List, DatePicker, CheckBox, Radio, ImgSlider, AddressPicker };
+export { Blank, Toast, Loading, BmuiSelectContainer, BmuiSelectColumn, BmuiSelect, List, DatePicker, CheckBox, Radio, ImgSlider, AddressPicker, Switch, BmuiConfirm };
 export default {
   Blank,
   Toast,
@@ -26,4 +28,6 @@ export default {
   Radio,
   ImgSlider,
   AddressPicker,
+  Switch,
+  BmuiConfirm,
 };

@@ -8,7 +8,6 @@ class Item extends Component {
     this.state = {};
   }
   render() {
-    console.log(this.props.children);
     return (
       <li
         onClick={this.props.onClick}

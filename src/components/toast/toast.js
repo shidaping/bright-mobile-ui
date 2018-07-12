@@ -14,6 +14,7 @@ class Toast extends Component {
     let apiToast;
     ReactDOM.render(
       <Toast
+        {...props}
         api={(api) => {
           apiToast = api;
         }}

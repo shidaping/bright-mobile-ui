@@ -1,0 +1,39 @@
+@import '~components/style/var.less';
+.bmui-confirm-container {
+  &>div:last-child {
+    background: white;
+    width: 70vw;
+    height: 50vw;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transition: all .3s cubic-bezier(0.2,0.5,1,1);
+    transform: scale(0);
+    opacity: 0;
+    z-index: 101;
+    margin-left: -35vw;
+    margin-top: -25vw;
+    border-radius: 5px;
+    &.active {
+      transform: scale(1);
+      opacity: 1;
+    }
+    .btn-container {
+      position: absolute;
+      bottom: 0;
+      line-height: 40px;
+      display: flex;
+      width: 100%;
+      border-top: 1px solid #cccccc;
+      button {
+        flex: 1;
+        line-height: 40px;
+        font-size: 16px;
+        border: none;
+        border-right: 1px solid #cccccc;
+        background: none;
+        color: @color-blue;
+      }
+    }
+  }
+}

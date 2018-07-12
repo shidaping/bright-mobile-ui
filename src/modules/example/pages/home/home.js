@@ -42,6 +42,13 @@ class Home extends React.Component {
             />
             <List.Item
               onClick={() => {
+                browserHistory.push('/confirm');
+              }}
+              label="Confirm确定"
+              noValue
+            />
+            <List.Item
+              onClick={() => {
                 browserHistory.push('/select');
               }}
               label="Select选择"
@@ -66,6 +73,13 @@ class Home extends React.Component {
                 browserHistory.push('/radio');
               }}
               label="Radio单选框"
+              noValue
+            />
+            <List.Item
+              onClick={() => {
+                browserHistory.push('/switch');
+              }}
+              label="Switch切换"
               noValue
             />
             <List.Item

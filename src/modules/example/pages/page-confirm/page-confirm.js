@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { showLoading, hideLoading } from 'modules/example/actions/loading';
 // import { actionAjaxGetNewsList } from '../../actions/news.js';
-import { Loading } from 'components';
-import 'components/loading/loading.less';
+import { BmuiConfirm } from 'components';
+import 'components/bmui-confirm/bmui-confirm.less';
 
 class PageLoading extends React.Component {
   constructor(props) {
@@ -23,24 +23,18 @@ class PageLoading extends React.Component {
               this.props.showLoading({
                 children: 'hello, world',
               });
-              setTimeout(() => {
-                this.props.hideLoading();
-              }, 2000);
             }}
           >
-            show loading
+            show confirm
           </button>
           <button
             style={{ marginTop: '10px' }}
             className="btn btn-orange btn-full"
             onClick={() => {
-              Loading.show();
-              setTimeout(() => {
-                Loading.hide();
-              }, 2000);
+              BmuiConfirm.show();
             }}
           >
-            static show loading
+            static show confirm
           </button>
         </div>
       </div>

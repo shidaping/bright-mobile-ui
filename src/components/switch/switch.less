@@ -1,0 +1,43 @@
+@import '~components/style/var.less';
+.bmui-switch {
+  appearance: none;
+  position: relative;
+  width: 63px !important;
+  height: 31px;
+  border: 1px solid #e3e3e3;
+  outline: 0;
+  border-radius: 16px;
+  box-sizing: border-box;
+  background: #dfdfdf;
+  &:before {
+    width: 61px;
+    background-color: #fdfdfd;
+  }
+  &:before,
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    height: 29px;
+    border-radius: 15px;
+    transition: transform .3s;
+  }
+  &:after {
+    width: 29px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+  }
+  &:checked {
+    // border-color: #04be02;
+    // background-color: #04be02;
+    border-color: @color-green;
+    background-color: @color-green;
+    &:before {
+      transform: scale(0);
+    }
+    &:after {
+      transform: translateX(31px);
+    }
+  }
+}
