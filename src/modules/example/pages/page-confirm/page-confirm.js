@@ -6,7 +6,7 @@ import { showLoading, hideLoading } from 'modules/example/actions/loading';
 import { BmuiConfirm } from 'components';
 import 'components/bmui-confirm/bmui-confirm.less';
 
-class PageLoading extends React.Component {
+class PageConfirm extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -17,16 +17,6 @@ class PageLoading extends React.Component {
     return (
       <div>
         <div className="padding-10">
-          <button
-            className="btn btn-orange btn-full"
-            onClick={() => {
-              this.props.showLoading({
-                children: 'hello, world',
-              });
-            }}
-          >
-            show confirm
-          </button>
           <button
             style={{ marginTop: '10px' }}
             className="btn btn-orange btn-full"
@@ -41,18 +31,14 @@ class PageLoading extends React.Component {
     );
   }
 }
-PageLoading.propTypes = {
-  showLoading: PropTypes.func,
-  hideLoading: PropTypes.func,
+PageConfirm.propTypes = {
+  // showLoading: PropTypes.func,
+  // hideLoading: PropTypes.func,
 };
-export default connect(
-  state => ({ dataNewsList: state.newsList.dataNewsList }),
-  dispatch => ({
-    showLoading: (requestData) => {
-      showLoading(dispatch, requestData);
-    },
-    hideLoading: () => {
-      hideLoading(dispatch);
-    },
-  })
-)(PageLoading);
+// export default connect(
+//   state => ({ dataNewsList: state.newsList.dataNewsList }),
+//   dispatch => ({
+
+//   })
+// )(PageLoading);
+export default PageConfirm;

@@ -43,6 +43,12 @@ class PageList extends React.Component {
               value={this.state.value}
             />
           </List.Item>
+          <List.Item
+            label="输入"
+            hideRight
+          >
+            很久以前有一个神仙，他的名字叫孙悟空
+          </List.Item>
         </List>
 
       </div>

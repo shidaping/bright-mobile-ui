@@ -62,7 +62,7 @@ class BuiSelectColumn extends Component {
     //     show: nextProps.show,
     //   });
     // }
-    console.log(nextProps.value);
+    // console.log(nextProps.value);
     if (nextProps.value !== this.state.value || !_.isEqual(nextProps.options, this.state.options)) {
       const options = nextProps.options || [];
       const value = nextProps.value;
@@ -81,7 +81,7 @@ class BuiSelectColumn extends Component {
       // this.translateY = -(30 * index);
       // // console.log(gap);
       // domContent.style.transform = `translateY(${this.translateY}px)`;
-      console.log(index, '-------------');
+      // console.log(index, '-------------');
       this.translateY = -(index * 30);
       this.setState({
         selected,
@@ -112,7 +112,7 @@ class BuiSelectColumn extends Component {
     // console.log('---------');
   }
   onTouchMove(e) {
-    console.log('asdfsdafasd');
+    // console.log('asdfsdafasd');
     let domThis = ReactDOM.findDOMNode(this);
     let domContent = domThis.querySelector('.bmui-select-column__content');
     domContent.style.transition = '';

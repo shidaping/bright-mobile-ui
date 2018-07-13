@@ -7,27 +7,35 @@ import { ImgSlider } from 'components';
 // import { actionAjaxGetNewsList } from '../../actions/news.js';
 import 'components/img-slider/img-slider.less';
 
+// const items = [
+//   {
+//     src: require('./images/1.jpg'),
+//     title: '',
+//   },
+//   {
+//     src: require('./images/2.jpg'),
+//     title: '',
+//   },
+//   {
+//     src: require('./images/3.jpg'),
+//     title: '',
+//   },
+//   {
+//     src: require('./images/4.jpg'),
+//     title: '',
+//   },
+//   {
+//     src: require('./images/5.jpg'),
+//     title: '',
+//   },
+// ];
+
 const items = [
-  {
-    src: require('./images/1.jpg'),
-    title: '',
-  },
-  {
-    src: require('./images/2.jpg'),
-    title: '',
-  },
-  {
-    src: require('./images/3.jpg'),
-    title: '',
-  },
-  {
-    src: require('./images/4.jpg'),
-    title: '',
-  },
-  {
-    src: require('./images/5.jpg'),
-    title: '',
-  },
+  require('./images/1.jpg'),
+  require('./images/2.jpg'),
+  require('./images/3.jpg'),
+  require('./images/4.jpg'),
+  require('./images/5.jpg'),
 ];
 
 class PageImgSlider extends React.Component {
@@ -50,7 +58,7 @@ class PageImgSlider extends React.Component {
           });
         }}
       >
-      <ImgSlider items={items} />
+        <ImgSlider items={items} />
       </div>
     );
   }

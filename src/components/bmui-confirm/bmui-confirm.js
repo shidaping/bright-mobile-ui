@@ -24,7 +24,6 @@ class BmuiConfirm extends Component {
     setTimeout(() => {
       apiToast.apiShow(children);
     }, 100);
-
   }
   static hide() {
     let dom = document.getElementById('bmuiConfirm');
@@ -86,8 +85,10 @@ class BmuiConfirm extends Component {
           // }}
         >
           <div className="content">
-            <h2>{this.props.title}</h2>
-            <p>{this.props.content}</p>
+            <div>
+              <h2>{this.props.title}</h2>
+              <p>{this.props.content}</p>
+            </div>
           </div>
           <div className="btn-container">
             {this.props.showCancel ? (
@@ -95,11 +96,26 @@ class BmuiConfirm extends Component {
                 onClick={() => {
                   this.setState({
                     show: false,
+                  }, () => {
+                    this.props.onCancel();
                   });
                 }}
-                className="cancel">{this.props.cancelText}</button>
+                className="cancel"
+              >
+                {this.props.cancelText}
+              </button>
             ) : null}
-            <button className="ok">{this.props.okText}</button>
+            <button
+              onClick={() => {
+                this.setState({
+                  show: false,
+                }, () => {
+                  this.props.onOk();
+                });
+              }}
+              className="ok"
+            >
+              {this.props.okText}</button>
           </div>
         </div>
       </div>
@@ -123,8 +139,8 @@ BmuiConfirm.defaultProps = {
   showCancel: true,
   cancelText: '取消',
   okText: '确定',
-  title: '',
-  content: '',
+  title: '确定删除？',
+  content: '删除后不可以恢复',
   onCancel: () => {},
   onOk: () => {},
 };

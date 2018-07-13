@@ -19,6 +19,8 @@ var webackConfig = {
     'css/radio': './src/components/radio/radio.less',
     'css/loading': './src/components/loading/loading.less',
     'css/toast': './src/components/toast/toast.less',
+    'css/switch': './src/components/switch/switch.less',
+    'css/bmui-confirm': './src/components/bmui-confirm/bmui-confirm.less',
   },
   output: {
     path: path.join(__dirname, 'dist'),

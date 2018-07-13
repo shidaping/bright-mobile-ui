@@ -2,21 +2,36 @@
 .bmui-confirm-container {
   &>div:last-child {
     background: white;
-    width: 70vw;
-    height: 50vw;
+    width: 260px;
+    height: 150px;
     position: fixed;
     left: 50%;
     top: 50%;
-    transition: all .3s cubic-bezier(0.2,0.5,1,1);
+    transition: all .3s cubic-bezier(0.4, 0, 0, 1.5);
     transform: scale(0);
     opacity: 0;
     z-index: 101;
-    margin-left: -35vw;
-    margin-top: -25vw;
+    margin-left: -130px;
+    margin-top: -75px;
     border-radius: 5px;
     &.active {
       transform: scale(1);
       opacity: 1;
+    }
+    .content{
+      display: flex;
+      height: 110px;
+      align-items: center;
+      &>div{
+        flex: 1;
+        text-align: center;
+        h2{
+
+        }
+        p{
+          color: #999999;
+        }
+      }
     }
     .btn-container {
       position: absolute;
@@ -33,6 +48,15 @@
         border-right: 1px solid #cccccc;
         background: none;
         color: @color-blue;
+        &.cancel{
+          color: #999999;
+        }
+        &:first-child{
+          border-bottom-left-radius: 5px;
+        }
+        &:last-child{
+          border-bottom-right-radius: 5px;
+        }
       }
     }
   }
