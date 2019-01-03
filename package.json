@@ -10,7 +10,7 @@
     "lint": "./node_modules/.bin/eslint src/components --ext \".js,.jsx\"",
     "build:lib": "babel src/components --out-dir lib",
     "build:dist": "rm -rf dist && webpack -p --progress",
-    "build": "npm run build:lib && npm run build:dist"
+    "build": "rm -rf lib && rm -rf dist && npm run build:lib && npm run build:dist"
   },
   "repository": {
     "type": "git",

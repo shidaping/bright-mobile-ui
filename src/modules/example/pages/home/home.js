@@ -110,6 +110,13 @@ class Home extends React.Component {
               label="AddressPicker地区三级联选"
               noValue
             />
+            <List.Item
+              onClick={() => {
+                browserHistory.push('/drawer');
+              }}
+              label="Drawer抽屉"
+              noValue
+            />
           </List>
 
 

@@ -21,6 +21,7 @@ var webackConfig = {
     'css/toast': './src/components/toast/toast.less',
     'css/switch': './src/components/switch/switch.less',
     'css/bmui-confirm': './src/components/bmui-confirm/bmui-confirm.less',
+    'css/drawer': './src/components/drawer/drawer.less',
   },
   output: {
     path: path.join(__dirname, 'dist'),
