@@ -1,5 +1,7 @@
-import List from './list.js';
-import Item from './item.js';
+import List from './list';
+import Item from './item';
+
+import './list.less';
 
 List.Item = Item;
 

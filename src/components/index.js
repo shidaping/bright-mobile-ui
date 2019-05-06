@@ -14,6 +14,7 @@ import Switch from './switch';
 import BmuiConfirm from './bmui-confirm';
 import Drawer from './drawer';
 import Pagination from './pagination';
+import './style/index.less';
 
 
 export { Blank, Toast, Loading, BmuiSelectContainer, BmuiSelectColumn, BmuiSelect, List, DatePicker, CheckBox, Radio, ImgSlider, AddressPicker, Switch, BmuiConfirm, Drawer, Pagination };

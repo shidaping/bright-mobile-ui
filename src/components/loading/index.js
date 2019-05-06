@@ -1,2 +1,4 @@
-import Loading from './loading.js';
+import Loading from './loading';
+import './loading.less';
+
 export default Loading;

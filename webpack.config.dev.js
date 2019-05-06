@@ -1,7 +1,5 @@
 var webpack = require('webpack');
 var path = require('path');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-// var AssetsWebpackPlugin = require('assets-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var nodeModulesDir = path.join(__dirname, 'node_modules');
 var webackConfig = {
@@ -34,15 +32,10 @@ var webackConfig = {
     // extensions: ['', '.js', '.jsx', '.less'],
   },
   plugins: [
-    // new webpack.optimize.CommonsChunkPlugin({ name: 'vendor' }),
-    new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin(
-      '[name].css', { allChunks: true }
-    ),
   ],
   module: {
     // noParse: ['./src/noparse/*'],
-    loaders: [{
+    rules: [{
       test: /\.js$/,
       exclude: /(node_modules)/,
       use: ['react-hot-loader/webpack', 'babel-loader'],
@@ -81,7 +74,6 @@ var webackConfig = {
     },
   },
 };
-// if (env === 'production') {
 webackConfig.plugins.push(new webpack.DefinePlugin({
   ENV: 'devepoment',
 }));

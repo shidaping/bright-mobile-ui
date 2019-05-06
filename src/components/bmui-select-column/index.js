@@ -1,2 +1,4 @@
-import BmuiSelectColumn from './bmui-select-column.js';
+import BmuiSelectColumn from './bmui-select-column';
+import './bmui-select-column.less';
+
 export default BmuiSelectColumn;

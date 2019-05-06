@@ -63,15 +63,15 @@ class Loading extends Component {
   render() {
     return (
       <div
-        className="bui-loading-mask"
+        className="bmui-loading-mask"
         style={{
           display: this.state.show ? 'block' : 'none',
         }}
       >
         <div
-          className="bui-loading"
+          className="bmui-loading"
         >
-          <span className="bui-loading__spiner" />
+          <span className="bmui-loading__spiner" />
           {this.state.children}
         </div>
       </div>

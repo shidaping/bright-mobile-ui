@@ -1,2 +1,5 @@
-import Toast from './toast.js';
+import Toast from './toast';
+import './toast.less';
+
 export default Toast;
+
