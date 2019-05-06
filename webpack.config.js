@@ -2,7 +2,7 @@ var webpack = require('webpack');
 var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 // var env = config.env;
-// var AssetsWebpackPlugin = require('assets-webpack-plugin');
+// var AnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var nodeModulesDir = path.join(__dirname, 'node_modules');
 var webackConfig = {
@@ -55,6 +55,7 @@ var webackConfig = {
       '[name].css',
       { allChunks: true }
     ),
+    // new AnalyzerPlugin(),
   ],
   module: {
     // noParse: ['./src/noparse/*'],

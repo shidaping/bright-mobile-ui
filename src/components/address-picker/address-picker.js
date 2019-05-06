@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import _ from 'lodash';
+import isEqual from 'lodash/isEqual';
 import BmuiSelectContainer from '../bmui-select-container';
 import BmuiSelectColumn from '../bmui-select-column';
 import data from './data';
@@ -31,7 +31,7 @@ class AddressPicker extends Component {
     }
   }
   componentWillReceiveProps(nextProps) {
-    if (_.isEqual(nextProps.value, this.state.value)) {
+    if (isEqual(nextProps.value, this.state.value)) {
       this.setState({
         value: nextProps.value,
       });

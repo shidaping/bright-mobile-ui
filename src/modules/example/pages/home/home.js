@@ -117,6 +117,13 @@ class Home extends React.Component {
               label="Drawer抽屉"
               noValue
             />
+            <List.Item
+              onClick={() => {
+                browserHistory.push('/pagination');
+              }}
+              label="Pagination分页"
+              noValue
+            />
           </List>
 
 

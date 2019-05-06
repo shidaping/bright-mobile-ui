@@ -23,10 +23,7 @@ class PageList extends React.Component {
       <div>
         <List>
           <List.Item
-            onClick={() => {
-              window.location.href = '//wwww.baidu.com';
-            }}
-            noValue
+            to="/"
             label="仅链接"
           />
           <List.Item

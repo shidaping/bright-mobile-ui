@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
-import _ from 'lodash';
+import isEqual from 'lodash/isEqual';
 // import './bmui-select-column.less';
 
 
@@ -63,7 +63,7 @@ class BuiSelectColumn extends Component {
     //   });
     // }
     // console.log(nextProps.value);
-    if (nextProps.value !== this.state.value || !_.isEqual(nextProps.options, this.state.options)) {
+    if (nextProps.value !== this.state.value || !isEqual(nextProps.options, this.state.options)) {
       const options = nextProps.options || [];
       const value = nextProps.value;
       let index = 0;

@@ -13,9 +13,10 @@ import AddressPicker from './address-picker';
 import Switch from './switch';
 import BmuiConfirm from './bmui-confirm';
 import Drawer from './drawer';
+import Pagination from './pagination';
 
 
-export { Blank, Toast, Loading, BmuiSelectContainer, BmuiSelectColumn, BmuiSelect, List, DatePicker, CheckBox, Radio, ImgSlider, AddressPicker, Switch, BmuiConfirm, Drawer };
+export { Blank, Toast, Loading, BmuiSelectContainer, BmuiSelectColumn, BmuiSelect, List, DatePicker, CheckBox, Radio, ImgSlider, AddressPicker, Switch, BmuiConfirm, Drawer, Pagination };
 export default {
   Blank,
   Toast,
@@ -32,4 +33,5 @@ export default {
   Switch,
   BmuiConfirm,
   Drawer,
+  Pagination,
 };

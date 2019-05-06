@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/shidaping/webpack-isomorphic-seed#readme",
   "dependencies": {
-    "bright-ui": "git+https://github.com/shidaping/bright-ui.git",
     "classnames": "^2.2.5",
     "moment": "^2.22.2",
     "prop-types": "^15.5.8",
@@ -74,6 +73,7 @@
     "redux-thunk": "^2.1.0",
     "style-loader": "^0.18.2",
     "webpack": "^3.6.0",
+    "webpack-bundle-analyzer": "^3.3.2",
     "webpack-dev-server": "^2.9.1",
     "webpack-hot-middleware": "^2.19.1"
   },
