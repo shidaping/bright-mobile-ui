@@ -14,10 +14,11 @@ import Switch from './switch';
 import BmuiConfirm from './bmui-confirm';
 import Drawer from './drawer';
 import Pagination from './pagination';
+import OptionSheet from './option-sheet';
 import './style/index.less';
 
 
-export { Blank, Toast, Loading, BmuiSelectContainer, BmuiSelectColumn, BmuiSelect, List, DatePicker, CheckBox, Radio, ImgSlider, AddressPicker, Switch, BmuiConfirm, Drawer, Pagination };
+export { Blank, Toast, Loading, BmuiSelectContainer, BmuiSelectColumn, BmuiSelect, List, DatePicker, CheckBox, Radio, ImgSlider, AddressPicker, Switch, BmuiConfirm, Drawer, Pagination, OptionSheet };
 export default {
   Blank,
   Toast,
@@ -35,4 +36,5 @@ export default {
   BmuiConfirm,
   Drawer,
   Pagination,
+  OptionSheet,
 };

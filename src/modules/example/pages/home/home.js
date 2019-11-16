@@ -124,6 +124,13 @@ class Home extends React.Component {
               label="Pagination分页"
               noValue
             />
+            <List.Item
+              onClick={() => {
+                browserHistory.push('/option-sheet');
+              }}
+              label="OptionSheet操作选项"
+              noValue
+            />
           </List>
 
 

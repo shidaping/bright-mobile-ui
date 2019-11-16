@@ -110,6 +110,12 @@ const rootRoute = {
       ).default,
     },
     {
+      path: 'option-sheet',
+      component: require( // eslint-disable-line global-require
+        'modules/example/pages/page-option-sheet' // eslint-disable-line
+      ).default,
+    },
+    {
       path: '*',
       component: require( // eslint-disable-line global-require
         'modules/error/components/not-found.js' // eslint-disable-line
