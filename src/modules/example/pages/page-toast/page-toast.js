@@ -38,6 +38,26 @@ class PageToast extends React.Component {
             static show toast
           </button>
         </div>
+        <div className="padding-10">
+          <button
+            className="btn btn-orange btn-full"
+            onClick={() => {
+              Toast.success('abc');
+            }}
+          >
+            static show success
+          </button>
+        </div>
+        <div className="padding-10">
+          <button
+            className="btn btn-orange btn-full"
+            onClick={() => {
+              Toast.error('abc');
+            }}
+          >
+            static show error
+          </button>
+        </div>
       </div>
     );
   }

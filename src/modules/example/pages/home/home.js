@@ -131,6 +131,13 @@ class Home extends React.Component {
               label="OptionSheet操作选项"
               noValue
             />
+            <List.Item
+              onClick={() => {
+                browserHistory.push('/stepper');
+              }}
+              label="Stepper步进器"
+              noValue
+            />
           </List>
 
 

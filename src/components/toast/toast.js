@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 class Toast extends Component {
   static show(children, props) {
@@ -23,6 +24,12 @@ class Toast extends Component {
       </Toast>,
       dom);
     apiToast.apiShow(children);
+  }
+  static success(children, props) {
+    this.show(children, { ...props, type: 'success' });
+  }
+  static error(children, props){
+    this.show(children, { ...props, type: 'error' });
   }
   static hide() {
     let dom = document.getElementById('bmuiToast');
@@ -83,15 +90,18 @@ class Toast extends Component {
           style={{
             display: this.state.show && !this.props.hideMask ? 'block' : 'none',
           }}
-        >
-          {this.props.children}
-        </div>
+        />
         <div
-          className="bmui-toast"
+          className={classnames('bmui-toast', {
+            success: this.props.type === 'success',
+            error: this.props.type === 'error',
+          })}
           style={{
             display: this.state.show ? 'block' : 'none',
           }}
         >
+          <div className="error-icon" />
+          <div className="success-icon" />
           {this.props.children}
         </div>
       </div>
@@ -103,9 +113,13 @@ Toast.propTypes = {
   timeout: PropTypes.number,
   show: PropTypes.bool,
   hideMask: PropTypes.bool,
+  type: PropTypes.string,
 };
 Toast.defaultProps = {
+  api: () => {},
+  show: false,
   timeout: 3000,
   hideMask: false,
+  type: 'default',
 };
 export default Toast;

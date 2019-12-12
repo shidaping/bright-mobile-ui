@@ -1,10 +1,89 @@
+@import '../style/var.less';
 .bmui-toast {
   background: rgba(0, 0, 0, 0.7);
-  border-radius: .5rem;
-  padding: 2rem;
+  border-radius: .3rem;
+  padding: 0.8rem;
   position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  min-width: 20vw;
+  max-width: 50vw;
+  text-align: center;
+  .error-icon, .success-icon{
+    display: none;
+  }
+  .success-icon{
+    text-align: center;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 3rem;
+    border: 1px solid @color-green;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+    &:before{
+      content: ' ';
+      border-left: 2px solid @color-green;
+      border-bottom: 2px solid @color-green;
+      display: inline-block;
+      width: 1.6rem;
+      height: 0.8rem;
+      transform: rotate(-45deg) translate(-0.5rem,0.5rem);
+    }
+  }
+  .error-icon{
+    text-align: center;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 3rem;
+    border: 1px solid @color-red;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+    position: relative;
+    &:before{
+      content: ' ';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -1rem;
+      border-bottom: 2px solid @color-red;
+      display: inline-block;
+      width: 2rem;
+      transform: rotate(45deg);
+      transform-origin: center;
+    }
+    &:after{
+      content: ' ';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -1rem;
+      border-bottom: 2px solid @color-red;
+      display: inline-block;
+      width: 2rem;
+      transform: rotate(-45deg);
+      transform-origin: center;
+    }
+  }
+  &.success{
+    color: @color-green;
+    background: white;
+    border: 1px solid #cccccc;
+    box-shadow: 3px 3px 10px 1px #cccccc;
+    .success-icon{
+      display: block;;
+    }
+  }
+  &.error{
+    color: @color-red;
+    background: white;
+    border: 1px solid #cccccc;
+    box-shadow: 3px 3px 10px 1px #cccccc;
+    .error-icon{
+      display: block;;
+    }
+  }
 }

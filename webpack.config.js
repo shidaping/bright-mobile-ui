@@ -16,8 +16,11 @@ var webackConfig = {
     Radio: path.join(__dirname, 'src/components/radio'),
     Switch: path.join(__dirname, 'src/components/switch'),
     Toast: path.join(__dirname, 'src/components/toast'),
+    OptionSheet: path.join(__dirname, 'src/components/option-sheet'),
+    Stepper: path.join(__dirname, 'src/components/stepper'),
     index: path.join(__dirname, 'src/components/index'),
     base: path.join(__dirname, 'src/components/style/index.less'),
+    bmui: path.join(__dirname, 'src/components/style/bmui.less'),
   },
   output: {
     path: path.join(__dirname, 'lib'),
