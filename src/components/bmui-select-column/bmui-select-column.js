@@ -173,6 +173,7 @@ class BuiSelectColumn extends Component {
       index: index,
     });
     this.props.onChange(value, selected);
+    e.preventDefault();
     // console.log(this.state.options[index]);
   }
   render() {

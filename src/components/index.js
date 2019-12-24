@@ -16,6 +16,7 @@ import Drawer from './drawer';
 import Pagination from './pagination';
 import OptionSheet from './option-sheet';
 import Stepper from './stepper';
+import Tab from './tab';
 import './style/index.less';
 
 
@@ -38,6 +39,7 @@ export {
   Pagination,
   OptionSheet,
   Stepper,
+  Tab,
 };
 export default {
   Blank,
@@ -58,4 +60,5 @@ export default {
   Pagination,
   OptionSheet,
   Stepper,
+  Tab,
 };

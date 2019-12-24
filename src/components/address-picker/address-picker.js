@@ -5,6 +5,7 @@ import BmuiSelectContainer from '../bmui-select-container';
 import BmuiSelectColumn from '../bmui-select-column';
 import data from './data';
 
+// 数据来源 https://github.com/modood/Administrative-divisions-of-China
 const defaultValue = {
   provinceCode: '11',
   provinceName: '北京市',
@@ -53,13 +54,9 @@ class AddressPicker extends Component {
   }
 
   render() {
-    const selectedProvince = data.find((item) => {
-      return item.code === this.state.value.provinceCode;
-    }) || data[0];
+    const selectedProvince = data.find(item => item.code === this.state.value.provinceCode) || data[0];
     const optionsCity = selectedProvince.children || [];
-    const selectedCity =  optionsCity.find((item) => {
-      return item.code === this.state.value.cityCode;
-    });
+    const selectedCity = optionsCity.find(item => item.code === this.state.value.cityCode) || optionsCity[0];
     const optionsArea = selectedCity.children || [];
     return (
       <BmuiSelectContainer

@@ -138,6 +138,13 @@ class Home extends React.Component {
               label="Stepper步进器"
               noValue
             />
+            <List.Item
+              onClick={() => {
+                browserHistory.push('/tab');
+              }}
+              label="Tab切换"
+              noValue
+            />
           </List>
 
 
