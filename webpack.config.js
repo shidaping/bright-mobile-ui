@@ -37,6 +37,7 @@ var webackConfig = {
     react: 'react',
     'react-dom': 'react-dom',
     lodash: 'lodash',
+    moment: 'moment',
   },
   resolve: {
     alias: {
@@ -68,15 +69,19 @@ var webackConfig = {
     }, {
       test: /(\.less|\.css)$/,
       use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'less-loader'],
+      exclude: /(node_modules)/,
     }, {
       test: /\.jpg|\.png$/,
       use: 'file-loader',
+      exclude: /(node_modules)/,
     }, {
       test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
       use: 'url-loader?limit=10000&minetype=application/font-woff',
+      exclude: /(node_modules)/,
     }, {
       test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
       use: 'file-loader',
+      exclude: /(node_modules)/,
     }],
 
   },

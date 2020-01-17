@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 class BmuiConfirm extends Component {
-  static show(children, props) {
+  static show(props) {
     let dom = document.getElementById('bmuiConfirm');
     if (dom) {
       document.body.removeChild(dom);
@@ -22,7 +22,7 @@ class BmuiConfirm extends Component {
       />,
       dom);
     setTimeout(() => {
-      apiToast.apiShow(children);
+      apiToast.apiShow();
     }, 100);
   }
   static hide() {
@@ -63,7 +63,7 @@ class BmuiConfirm extends Component {
       show: false,
     });
   }
-  apiShow(children) {
+  apiShow() {
     this.setState({
       show: true,
     });
@@ -140,7 +140,7 @@ BmuiConfirm.defaultProps = {
   cancelText: '取消',
   okText: '确定',
   title: '确定删除？',
-  content: '删除后不可以恢复',
+  content: '',
   onCancel: () => {},
   onOk: () => {},
 };

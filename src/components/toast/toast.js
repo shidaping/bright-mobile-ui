@@ -118,7 +118,7 @@ Toast.propTypes = {
 Toast.defaultProps = {
   api: () => {},
   show: false,
-  timeout: 3000,
+  timeout: 2000,
   hideMask: false,
   type: 'default',
 };

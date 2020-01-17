@@ -23,8 +23,6 @@ class Tab extends Component {
         left = `${(100 / this.props.options.length) * i}%`;
       }
     });
-    console.log(left);
-    console.log(this.state.value);
     return (
       <div
         className="bmui-tab"

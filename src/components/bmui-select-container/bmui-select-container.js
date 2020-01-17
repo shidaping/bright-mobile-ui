@@ -94,6 +94,9 @@ class BmuiSelectContainer extends Component {
             style={{
               height: this.props.contentHeight,
             }}
+            onTouchMove={e => {
+              e.stopPropagation();
+            }}
             className="bmui-select-container__content"
           >
             {this.props.children}
