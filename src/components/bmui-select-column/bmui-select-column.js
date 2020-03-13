@@ -122,6 +122,7 @@ class BuiSelectColumn extends Component {
     domContent.style.transform = `translateY(${this.translateY}px)`;
     // console.log(domContent.style.transform);
     this.touchLast = e.touches[0];
+    e.preventDefault();
     // console.log(e.touches[0]);
     // console.log(gap);
   }
