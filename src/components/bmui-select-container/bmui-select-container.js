@@ -3,6 +3,10 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 
+const windowScrollListener = (e) => {
+  e.preventDefault();
+};
+
 class BmuiSelectContainer extends Component {
   constructor(props) {
     super(props);
@@ -32,6 +36,7 @@ class BmuiSelectContainer extends Component {
     let domThis = ReactDOM.findDOMNode(this);
     // domThis.classList.add('active');
     domThis.style.display = 'block';
+    window.addEventListener('scroll', windowScrollListener);
     setTimeout(() => {
       domThis.style.opacity = 1;
       domThis.querySelector('.bmui-select-container__modal').style.transform = 'translateY(0)';
@@ -53,6 +58,7 @@ class BmuiSelectContainer extends Component {
     // });
     let domThis = ReactDOM.findDOMNode(this);
     // domThis.classList.remove('active');
+    window.removeEventListener('scroll', windowScrollListener);
     domThis.querySelector('.bmui-select-container__modal').style.transform = 'translateY(100%)';
     domThis.style.opacity = 0;
     setTimeout(() => {
