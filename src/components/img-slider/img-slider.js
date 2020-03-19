@@ -157,6 +157,10 @@ class ImgSlider extends Component {
                   }
                 }}
                 src={item}
+                style={{
+                  maxHeight: this.state.big ? '100%' : this.props.height,
+                  maxWidth: this.state.big ? '100%' : this.props.width,
+                }}
                 alt=""
               />
             </section>

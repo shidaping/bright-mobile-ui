@@ -52,11 +52,6 @@ class PageImgSlider extends React.Component {
   render() {
     return (
       <div
-        onClick={() => {
-          this.setState({
-            active: !this.state.active,
-          });
-        }}
       >
         <ImgSlider items={items} />
       </div>
