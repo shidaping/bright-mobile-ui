@@ -9,6 +9,7 @@ class ImgSlider extends Component {
     this.state = {
       index: 0,
       transition: true,
+      big: false,
     };
     this.onTouchStart = this.onTouchStart.bind(this);
     this.onTouchMove = this.onTouchMove.bind(this);
@@ -113,6 +114,7 @@ class ImgSlider extends Component {
       <div
         className={classnames('bmui-img-slider', {
           hide: this.props.show,
+          big: this.state.big,
         })}
         style={{
           width: this.props.width,
@@ -144,6 +146,12 @@ class ImgSlider extends Component {
             >
               <img
                 onClick={(e) => {
+                  if (this.props.big) {
+                    this.setState({
+                      big: !this.state.big,
+                    });
+                  }
+
                   if (this.props.disableImgClick) {
                     e.preventDefault();
                   }
@@ -185,6 +193,7 @@ ImgSlider.propTypes = {
   theme: PropTypes.string,
   showBubble: PropTypes.bool,
   disableImgClick: PropTypes.bool,
+  big: PropTypes.bool,
 };
 
 ImgSlider.defaultProps = {
@@ -196,6 +205,8 @@ ImgSlider.defaultProps = {
   onItemClick: () => {},
   showBubble: true,
   disableImgClick: false,
+  big: true,
+
 };
 
 export default ImgSlider;
