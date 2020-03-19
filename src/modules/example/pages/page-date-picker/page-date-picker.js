@@ -9,7 +9,6 @@ import 'components/list/list.less';
 import 'components/date-picker/date-picker.less';
 
 
-console.log(List.Item);
 const map = {
   'male': '男',
   'female': '女',

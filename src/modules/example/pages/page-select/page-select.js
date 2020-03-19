@@ -8,8 +8,6 @@ import { BmuiSelect, List } from 'components';
 import 'components/list/list.less';
 import 'components/bmui-select/bmui-select.less';
 
-
-console.log(List.Item);
 const map = {
   'male': '男',
   'female': '女',

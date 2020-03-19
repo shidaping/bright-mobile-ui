@@ -10,14 +10,32 @@ class ImgSlider extends Component {
       index: 0,
       transition: true,
       big: false,
+      console: 0,
+      zoom: 1,
     };
     this.onTouchStart = this.onTouchStart.bind(this);
     this.onTouchMove = this.onTouchMove.bind(this);
     this.onTouchEnd = this.onTouchEnd.bind(this);
   }
   onTouchStart(e) {
+    this.touchSize = e.touches.length;
     this.touchStartX = e.touches[0] ? e.touches[0].pageX : 0;
     // e.preventDefault();
+    // if (this.state.big && this.touchSize === 2) {
+    //   this.touchStartY = e.touches[0] ? e.touches[0].pageY : 0;
+    //   this.touchStartX2 = e.touches[1] ? e.touches[1].pageX : 0;
+    //   this.touchStartY2 = e.touches[1] ? e.touches[1].pageY : 0;
+    // }
+    // if (this.state.big && this.touchSize === 2) {
+    //   this.touchEndX = e.touches[0] ? e.touches[0].pageX : 0;
+    //   this.touchEndY = e.touches[0] ? e.touches[0].pageY : 0;
+    //   this.touchEndX2 = e.touches[1] ? e.touches[1].pageX : 0;
+    //   this.touchEndY2 = e.touches[1] ? e.touches[1].pageY : 0;
+
+    //   const distance = Math.sqrt((this.touchEndX2 - this.touchEndX) ** 2 + (this.touchEndY2 - this.touchEndY) ** 2 )
+    //   this.firstDistance = distance;
+
+    // }
   }
   onTouchMove(e) {
     // let domThis = ReactDOM.findDOMNode(this);
@@ -32,8 +50,8 @@ class ImgSlider extends Component {
     // e.preventDefault();
   }
   onTouchEnd(e) {
-    this.touchEndX = e.changedTouches[0] ? e.changedTouches[0].pageX : 0;
-    const deltaX = this.touchEndX - this.touchStartX;
+    this.firstDistance = null;
+
     // let newIndex = this.state.index;
     // console.log(deltaX, "++++++++");
 
@@ -67,16 +85,19 @@ class ImgSlider extends Component {
     //     });
     //   }
     // };
-
-    if (deltaX > 30 && this.state.index > 0) {
-      this.setState({
-        index: this.state.index - 1,
-      });
-    }
-    if (deltaX < -30 && this.state.index < this.props.items.length - 1) {
-      this.setState({
-        index: this.state.index + 1,
-      });
+    if (this.touchSize === 1) {
+      this.touchEndX = e.changedTouches[0] ? e.changedTouches[0].pageX : 0;
+      const deltaX = this.touchEndX - this.touchStartX;
+      if (deltaX > 30 && this.state.index > 0) {
+        this.setState({
+          index: this.state.index - 1,
+        });
+      }
+      if (deltaX < -30 && this.state.index < this.props.items.length - 1) {
+        this.setState({
+          index: this.state.index + 1,
+        });
+      }
     }
 
     // 向左
@@ -114,7 +135,7 @@ class ImgSlider extends Component {
       <div
         className={classnames('bmui-img-slider', {
           hide: this.props.show,
-          big: this.state.big,
+          big: this.props.big,
         })}
         style={{
           width: this.props.width,
@@ -158,8 +179,8 @@ class ImgSlider extends Component {
                 }}
                 src={item}
                 style={{
-                  maxHeight: this.state.big ? '100%' : this.props.height,
-                  maxWidth: this.state.big ? '100%' : this.props.width,
+                  maxHeight: this.props.big ? '100%' : this.props.height,
+                  maxWidth: this.props.big ? '100%' : this.props.width,
                 }}
                 alt=""
               />
@@ -172,7 +193,7 @@ class ImgSlider extends Component {
           */}
         </div>
         {this.props.showBubble ? (
-          <ul className="bubble-list clearfix">
+          <ul className="bubble-list">
             {this.props.items.map((item, i) => (
               <li
                 className={classnames('pull-left', {
@@ -183,6 +204,17 @@ class ImgSlider extends Component {
             ))}
           </ul>
         ) : null}
+
+        <h2 style={{
+          position: 'absolute',
+          bottom: 10,
+          left: 0,
+          color: 'white',
+          width: 30,
+          height: 10,
+          fontSize: 20,
+        }}
+        >{this.state.console}</h2>
       </div>
     );
   }
@@ -210,7 +242,6 @@ ImgSlider.defaultProps = {
   showBubble: true,
   disableImgClick: false,
   big: true,
-
 };
 
 export default ImgSlider;
