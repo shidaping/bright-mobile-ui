@@ -167,11 +167,11 @@ class ImgSlider extends Component {
             >
               <img
                 onClick={(e) => {
-                  if (this.props.big) {
-                    this.setState({
-                      big: !this.state.big,
-                    });
-                  }
+                  // if (this.props.big) {
+                  //   this.setState({
+                  //     big: !this.state.big,
+                  //   });
+                  // }
 
                   if (this.props.disableImgClick) {
                     e.preventDefault();
@@ -205,7 +205,7 @@ class ImgSlider extends Component {
           </ul>
         ) : null}
 
-        <h2 style={{
+        {/* <h2 style={{
           position: 'absolute',
           bottom: 10,
           left: 0,
@@ -214,7 +214,7 @@ class ImgSlider extends Component {
           height: 10,
           fontSize: 20,
         }}
-        >{this.state.console}</h2>
+        >{this.state.console}</h2> */}
       </div>
     );
   }
@@ -241,7 +241,7 @@ ImgSlider.defaultProps = {
   onItemClick: () => {},
   showBubble: true,
   disableImgClick: false,
-  big: true,
+  big: false,
 };
 
 export default ImgSlider;

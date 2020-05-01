@@ -13,6 +13,8 @@ class PagePagination extends React.Component {
     this.state = {
       boolShow: false,
       value: '',
+      currentPage: 1,
+      total: 26,
     };
   }
   componentDidMount() {
@@ -21,7 +23,15 @@ class PagePagination extends React.Component {
   render() {
     return (
       <div>
-        <Pagination />
+        <Pagination
+          total={this.state.total}
+          onChange={(currentPage) => {
+            this.setState({
+              currentPage,
+            });
+          }}
+          currentPage={this.state.currentPage}
+        />
 
       </div>
     );

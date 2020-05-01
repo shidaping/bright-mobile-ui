@@ -20,6 +20,7 @@ var webackConfig = {
     Stepper: path.join(__dirname, 'src/components/stepper'),
     BmuiConfirm: path.join(__dirname, 'src/components/bmui-confirm'),
     Tab: path.join(__dirname, 'src/components/tab'),
+    Pagination: path.join(__dirname, 'src/components/pagination'),
     index: path.join(__dirname, 'src/components/index'),
     base: path.join(__dirname, 'src/components/style/index.less'),
     bmui: path.join(__dirname, 'src/components/style/bmui.less'),
