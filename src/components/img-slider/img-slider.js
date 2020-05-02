@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import isEqual from 'lodash/isEqual';
 
 
 class ImgSlider extends Component {
@@ -12,10 +13,19 @@ class ImgSlider extends Component {
       big: false,
       console: 0,
       zoom: 1,
+      items: props.items,
     };
     this.onTouchStart = this.onTouchStart.bind(this);
     this.onTouchMove = this.onTouchMove.bind(this);
     this.onTouchEnd = this.onTouchEnd.bind(this);
+  }
+  componentWillReceiveProps(nextProps) {
+    if (!isEqual(nextProps.items, this.state.items)) {
+      this.setState({
+        items: nextProps.items,
+        index: 0,
+      });
+    }
   }
   onTouchStart(e) {
     this.touchSize = e.touches.length;
@@ -158,7 +168,7 @@ class ImgSlider extends Component {
             <img src={this.props.items[this.props.items.length - 1].src} alt="" />
           </section>
           */}
-          {this.props.items.map((item, i) => (
+          {this.state.items.map((item, i) => (
             <section
               onClick={(e) => {
                 this.props.onItemClick(item, e);
@@ -194,7 +204,7 @@ class ImgSlider extends Component {
         </div>
         {this.props.showBubble ? (
           <ul className="bubble-list">
-            {this.props.items.map((item, i) => (
+            {this.state.items.map((item, i) => (
               <li
                 className={classnames('pull-left', {
                   active: this.state.index === i,
