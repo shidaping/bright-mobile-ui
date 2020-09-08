@@ -33,8 +33,7 @@ class Drawer extends Component {
       });
     }
   }
-  componentWillUpdate() {
-  }
+  componentWillUpdate() {}
   apiShow() {
     let domThis = ReactDOM.findDOMNode(this);
     // domThis.classList.add('active');
@@ -43,7 +42,6 @@ class Drawer extends Component {
       domThis.style.opacity = 1;
       domThis.querySelector('.bmui-drawer__modal').style.transform = 'translateX(0)';
     }, 10);
-
 
     // this.setState({
     //   show: true,

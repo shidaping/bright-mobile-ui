@@ -8,19 +8,15 @@ import { Radio, List } from 'components';
 import 'components/list/list.less';
 import 'components/radio/radio.less';
 
-
-
 class PageRadio extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       boolShow: false,
       value: '',
     };
   }
-  componentDidMount() {
-
-  }
+  componentDidMount() {}
   render() {
     return (
       <div
@@ -32,9 +28,7 @@ class PageRadio extends React.Component {
         className="display-flex"
         style={{ padding: 10 }}
       >
-        <Radio
-          active={this.state.active}
-        />
+        <Radio active={this.state.active} />
         &nbsp;单选框示例
       </div>
     );

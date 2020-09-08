@@ -3,7 +3,6 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import isEqual from 'lodash/isEqual';
 
-
 class ImgSlider extends Component {
   constructor(props) {
     super(props);
@@ -69,7 +68,6 @@ class ImgSlider extends Component {
     //   nexIndex = this.state.index;
     // }
 
-
     // const reset = () => {
     //   if (this.state.index === 0) {
     //     this.setState({
@@ -124,18 +122,18 @@ class ImgSlider extends Component {
     // }
 
     // 向右
-  //   if (deltaX < -50) {
-  //     this.setState({
-  //       transition: true,
-  //     }, () => {
-  //       this.setState({
-  //         index: newIndex + 1,
-  //       }, () => {
-  //         setTimeout(reset, 600);
-  //       });
-  //     });
+    //   if (deltaX < -50) {
+    //     this.setState({
+    //       transition: true,
+    //     }, () => {
+    //       this.setState({
+    //         index: newIndex + 1,
+    //       }, () => {
+    //         setTimeout(reset, 600);
+    //       });
+    //     });
 
-  //   }
+    //   }
   }
   // componentWillReceiveProps(nextProps) {
 

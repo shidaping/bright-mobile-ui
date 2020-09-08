@@ -19,7 +19,6 @@ import Stepper from './stepper';
 import Tab from './tab';
 import './style/index.less';
 
-
 export {
   Blank,
   Toast,

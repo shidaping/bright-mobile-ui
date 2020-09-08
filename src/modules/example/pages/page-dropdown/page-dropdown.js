@@ -13,23 +13,14 @@ class PageForm extends React.Component {
       boolShowPassword: false,
     };
   }
-  componentDidMount() {
-
-  }
+  componentDidMount() {}
   render() {
     return (
       <div>
         <div className="padding-10">
-          <Dropdown
-            text="我的下拉菜单"
-            icon="bui-iconfont bui-icon-angle-down"
-          >
+          <Dropdown text="我的下拉菜单" icon="bui-iconfont bui-icon-angle-down">
             <ul className="bui-dropdown-content-list">
-              <li
-                onClick={() => {
-                  
-                }}
-              ></li>
+              <li onClick={() => {}}></li>
             </ul>
           </Dropdown>
         </div>

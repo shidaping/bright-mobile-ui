@@ -10,9 +10,7 @@ class PageLoading extends React.Component {
   constructor(props) {
     super(props);
   }
-  componentDidMount() {
-
-  }
+  componentDidMount() {}
   render() {
     return (
       <div>
@@ -52,8 +50,8 @@ PageLoading.propTypes = {
   hideLoading: PropTypes.func,
 };
 export default connect(
-  state => ({ dataNewsList: state.newsList.dataNewsList }),
-  dispatch => ({
+  (state) => ({ dataNewsList: state.newsList.dataNewsList }),
+  (dispatch) => ({
     showLoading: (requestData) => {
       showLoading(dispatch, requestData);
     },

@@ -14,20 +14,20 @@ export function ajaxGetNewsList(requestData) {
   //     });
   //   }
   // );
-  return new Promise(
-    (resolve, reject) => {
-      fetch('/data/newsList')
-      .then((res) => {
-        if (res.status === 200) {
-          res.json().then((data) => {
+  return new Promise((resolve, reject) => {
+    fetch('/data/newsList').then((res) => {
+      if (res.status === 200) {
+        res
+          .json()
+          .then((data) => {
             resolve(data);
-          }).cathch((err) => {
+          })
+          .cathch((err) => {
             console.error(err);
           });
-          return;
-        }
-        reject(res);
-      });
-    }
-  );
+        return;
+      }
+      reject(res);
+    });
+  });
 }

@@ -7,12 +7,10 @@ import { Toast } from 'components';
 // import 'components/style/index.less';
 
 class PageToast extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
   }
-  componentDidMount() {
-
-  }
+  componentDidMount() {}
   render() {
     return (
       <div>
@@ -67,8 +65,8 @@ PageToast.propTypes = {
   dataNewsList: PropTypes.array,
 };
 export default connect(
-  state => ({ dataNewsList: state.newsList.dataNewsList }),
-  dispatch => ({
+  (state) => ({ dataNewsList: state.newsList.dataNewsList }),
+  (dispatch) => ({
     showToast: (requestData) => {
       showToast(dispatch, requestData);
     },

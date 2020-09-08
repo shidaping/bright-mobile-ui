@@ -19,7 +19,9 @@ class Item extends Component {
         >
           <div className="col1">{this.props.label}</div>
           <div className="col2">
-            {this.props.children ? this.props.children : (
+            {this.props.children ? (
+              this.props.children
+            ) : (
               <span className="placeholder">{this.props.placeholder}</span>
             )}
           </div>
@@ -41,7 +43,9 @@ class Item extends Component {
       >
         <div className="col1">{this.props.label}</div>
         <div className="col2">
-          {this.props.children ? this.props.children : (
+          {this.props.children ? (
+            this.props.children
+          ) : (
             <span className="placeholder">{this.props.placeholder}</span>
           )}
         </div>

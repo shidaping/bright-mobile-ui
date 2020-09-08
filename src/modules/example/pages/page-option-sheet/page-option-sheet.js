@@ -6,18 +6,15 @@ import { OptionSheet } from 'components';
 import 'components/option-sheet/option-sheet.less';
 // import 'components/bmui-select/bmui-select.less';
 
-
 class PageList extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       boolShow: false,
       value: '',
     };
   }
-  componentDidMount() {
-
-  }
+  componentDidMount() {}
   render() {
     return (
       <div>
@@ -28,7 +25,7 @@ class PageList extends React.Component {
             }}
             className="btn btn-orange btn-full"
           >
-          打开操作栏
+            打开操作栏
           </button>
         </div>
         <OptionSheet
@@ -55,6 +52,5 @@ class PageList extends React.Component {
     );
   }
 }
-PageList.propTypes = {
-};
+PageList.propTypes = {};
 export default PageList;

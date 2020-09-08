@@ -9,9 +9,9 @@ import 'components/list/list.less';
 import 'components/bmui-select/bmui-select.less';
 
 const map = {
-  'male': '男',
-  'female': '女',
-}
+  male: '男',
+  female: '女',
+};
 
 const options = [
   {
@@ -21,20 +21,18 @@ const options = [
   {
     text: '女',
     value: 'female',
-  } 
-]
+  },
+];
 
 class PageSelect extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       boolShow: false,
       value: '',
     };
   }
-  componentDidMount() {
-
-  }
+  componentDidMount() {}
   render() {
     return (
       <div>
@@ -81,6 +79,5 @@ class PageSelect extends React.Component {
     );
   }
 }
-PageSelect.propTypes = {
-};
+PageSelect.propTypes = {};
 export default PageSelect;

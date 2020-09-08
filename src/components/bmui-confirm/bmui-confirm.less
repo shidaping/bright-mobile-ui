@@ -1,13 +1,13 @@
 @import '~components/style/var.less';
 .bmui-confirm-container {
-  &>div:last-child {
+  & > div:last-child {
     background: white;
     width: 260px;
     height: 150px;
     position: fixed;
     left: 50%;
     top: 50%;
-    transition: all .3s cubic-bezier(0.4, 0, 0, 1.5);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0, 1.5);
     transform: scale(0);
     opacity: 0;
     z-index: 101;
@@ -18,17 +18,16 @@
       transform: scale(1);
       opacity: 1;
     }
-    .content{
+    .content {
       display: flex;
       height: 110px;
       align-items: center;
-      &>div{
+      & > div {
         flex: 1;
         text-align: center;
-        h2{
-
+        h2 {
         }
-        p{
+        p {
           color: #999999;
         }
       }
@@ -48,13 +47,13 @@
         border-right: 1px solid #cccccc;
         background: none;
         color: @color-blue;
-        &.cancel{
+        &.cancel {
           color: #999999;
         }
-        &:first-child{
+        &:first-child {
           border-bottom-left-radius: 5px;
         }
-        &:last-child{
+        &:last-child {
           border-bottom-right-radius: 5px;
         }
       }

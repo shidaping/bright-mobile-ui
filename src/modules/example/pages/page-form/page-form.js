@@ -12,9 +12,7 @@ class PageForm extends React.Component {
       boolShowPassword: false,
     };
   }
-  componentDidMount() {
-
-  }
+  componentDidMount() {}
   render() {
     return (
       <div>
@@ -26,7 +24,11 @@ class PageForm extends React.Component {
           <h1 className="page-form-h1">带左右图标输入框</h1>
           <div className="form-group-with-addon-left form-group-with-addon-right">
             <i className="bui-iconfont bui-icon-password addon-left" />
-            <input className="form-control" placeholder="请输入" type={this.state.boolShowPassword ? 'text' : 'password'} />
+            <input
+              className="form-control"
+              placeholder="请输入"
+              type={this.state.boolShowPassword ? 'text' : 'password'}
+            />
             <i
               className={classnames('bui-iconfont bui-icon-eye addon-right', {
                 'color-blue': this.state.boolShowPassword,

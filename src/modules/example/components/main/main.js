@@ -29,18 +29,12 @@ import './main.less';
 //   children: PropTypes.any,
 // };
 // export default Main;
-const Main = function(props) {
+const Main = function (props) {
   return (
     <div>
-      <div>
-        {props.children}
-      </div>
-      <Toast show={props.toast.boolShow}>
-        {props.toast.children}
-      </Toast>
-      <Loading show={props.loading.boolShow}>
-        {props.loading.children}
-      </Loading>
+      <div>{props.children}</div>
+      <Toast show={props.toast.boolShow}>{props.toast.children}</Toast>
+      <Loading show={props.loading.boolShow}>{props.loading.children}</Loading>
     </div>
   );
 };
@@ -50,8 +44,8 @@ Main.propTypes = {
   loading: PropTypes.any, // eslint-disable-line
 };
 export default connect(
-  state => ({ toast: state.toast, loading: state.loading }),
-  dispatch => ({
+  (state) => ({ toast: state.toast, loading: state.loading }),
+  (dispatch) => ({
     showToast: () => {
       showToast(dispatch);
     },

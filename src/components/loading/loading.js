@@ -20,7 +20,8 @@ class Loading extends Component {
       >
         {children}
       </Loading>,
-      dom);
+      dom
+    );
     apiToast.apiShow(children);
   }
   static hide() {
@@ -68,9 +69,7 @@ class Loading extends Component {
           display: this.state.show ? 'block' : 'none',
         }}
       >
-        <div
-          className="bmui-loading"
-        >
+        <div className="bmui-loading">
           <span className="bmui-loading__spiner" />
           {this.state.children}
         </div>

@@ -147,7 +147,6 @@ class Home extends React.Component {
             />
           </List>
 
-
           {/*
 
           <Link to={'/toast'}>
@@ -172,7 +171,6 @@ class Home extends React.Component {
           </Link>
           */}
         </div>
-
       </div>
     );
   }

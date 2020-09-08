@@ -48,8 +48,7 @@ class DatePicker extends Component {
       });
     }
   }
-  componentWillUpdate() {
-  }
+  componentWillUpdate() {}
   // 计算一个月最大有多少天
   getMaxDay() {
     let maxDay = 31;
@@ -61,7 +60,8 @@ class DatePicker extends Component {
         maxDay = 30;
         break;
       }
-      default: break;
+      default:
+        break;
     }
     if (this.state.month === 2) {
       if (this.state.year % 4 === 0 && this.state.year % 100 !== 0) {
@@ -174,19 +174,22 @@ class DatePicker extends Component {
             options={yearOptions}
             value={this.state.year}
             onChange={(value) => {
-              this.setState({
-                year: value,
-              }, () => {
-                let day = this.state.day;
-                const maxDay = this.getMaxDay();
-                if (maxDay < this.state.day) {
-                  day = maxDay;
+              this.setState(
+                {
+                  year: value,
+                },
+                () => {
+                  let day = this.state.day;
+                  const maxDay = this.getMaxDay();
+                  if (maxDay < this.state.day) {
+                    day = maxDay;
+                  }
+                  this.setState({
+                    day,
+                  });
+                  this.changeValue();
                 }
-                this.setState({
-                  day,
-                });
-                this.changeValue();
-              });
+              );
             }}
           />
         ) : null}
@@ -195,19 +198,22 @@ class DatePicker extends Component {
             options={monthOptions}
             value={this.state.month}
             onChange={(value) => {
-              this.setState({
-                month: value,
-              }, () => {
-                let day = this.state.day;
-                const maxDay = this.getMaxDay();
-                if (maxDay < this.state.day) {
-                  day = maxDay;
+              this.setState(
+                {
+                  month: value,
+                },
+                () => {
+                  let day = this.state.day;
+                  const maxDay = this.getMaxDay();
+                  if (maxDay < this.state.day) {
+                    day = maxDay;
+                  }
+                  this.setState({
+                    day,
+                  });
+                  this.changeValue();
                 }
-                this.setState({
-                  day,
-                });
-                this.changeValue();
-              });
+              );
             }}
           />
         ) : null}
@@ -216,11 +222,14 @@ class DatePicker extends Component {
             options={dayOptions}
             value={this.state.day}
             onChange={(value) => {
-              this.setState({
-                day: value,
-              }, () => {
-                this.changeValue();
-              });
+              this.setState(
+                {
+                  day: value,
+                },
+                () => {
+                  this.changeValue();
+                }
+              );
             }}
           />
         ) : null}
@@ -229,11 +238,14 @@ class DatePicker extends Component {
             options={hourOptions}
             value={this.state.hour}
             onChange={(value) => {
-              this.setState({
-                hour: value,
-              }, () => {
-                this.changeValue();
-              });
+              this.setState(
+                {
+                  hour: value,
+                },
+                () => {
+                  this.changeValue();
+                }
+              );
             }}
           />
         ) : null}
@@ -242,11 +254,14 @@ class DatePicker extends Component {
             options={minuteOptions}
             value={this.state.minute}
             onChange={(value) => {
-              this.setState({
-                minute: value,
-              }, () => {
-                this.changeValue();
-              });
+              this.setState(
+                {
+                  minute: value,
+                },
+                () => {
+                  this.changeValue();
+                }
+              );
             }}
           />
         ) : null}
@@ -255,11 +270,14 @@ class DatePicker extends Component {
             options={secondsOptions}
             value={this.state.seconds}
             onChange={(value) => {
-              this.setState({
-                seconds: value,
-              }, () => {
-                this.changeValue();
-              });
+              this.setState(
+                {
+                  seconds: value,
+                },
+                () => {
+                  this.changeValue();
+                }
+              );
             }}
           />
         ) : null}
@@ -280,10 +298,7 @@ DatePicker.propTypes = {
   api: PropTypes.func,
   onChange: PropTypes.func,
   title: PropTypes.string,
-  value: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-  ]),
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 DatePicker.defaultProps = {
   format: 'YYYY-MM-DD HH:mm:ss',

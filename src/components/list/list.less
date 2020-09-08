@@ -1,33 +1,33 @@
 @import '~components/style/var.less';
-.bmui-list{
-  .bmui-list__item{
+.bmui-list {
+  .bmui-list__item {
     display: flex;
     align-items: center;
     height: 40px;
     padding: 0 10px;
     border-bottom: 1px solid @color-border;
-    .col1{
+    .col1 {
       flex: 100px 0;
       text-decoration: none;
       color: @color-body;
       font-size: 14px;
     }
-    .col2{
+    .col2 {
       flex: 1;
       text-align: right;
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
-      .placeholder{
+      .placeholder {
         color: @color-placeholder;
       }
-      &>input{
+      & > input {
         width: 100%;
         text-align: right;
         border: none;
       }
     }
-    .col3{
+    .col3 {
       height: 8px;
       width: 8px;
       border-top: 1px solid #999999;
@@ -36,11 +36,11 @@
       position: relative;
       top: -1px;
     }
-    &.no-value{
-      .col1{
+    &.no-value {
+      .col1 {
         flex: 1;
       }
-      .col2{
+      .col2 {
         display: none;
       }
     }

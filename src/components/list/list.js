@@ -10,11 +10,7 @@ class List extends Component {
     };
   }
   render() {
-    return (
-      <ul className="bmui-list">
-        {this.props.children}
-      </ul>
-    );
+    return <ul className="bmui-list">{this.props.children}</ul>;
   }
 }
 List.propTypes = {

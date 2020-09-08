@@ -7,7 +7,6 @@ import { List, Stepper } from 'components';
 // import { actionAjaxGetNewsList } from '../../actions/news.js';
 import 'components/stepper/stepper.less';
 
-
 class PageStepper extends React.Component {
   constructor(props) {
     super(props);
@@ -16,9 +15,7 @@ class PageStepper extends React.Component {
       value: 0,
     };
   }
-  componentDidMount() {
-
-  }
+  componentDidMount() {}
   render() {
     return (
       <Stepper
@@ -29,7 +26,6 @@ class PageStepper extends React.Component {
           });
         }}
       />
-
     );
   }
 }

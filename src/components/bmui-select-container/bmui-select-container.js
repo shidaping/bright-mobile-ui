@@ -30,8 +30,7 @@ class BmuiSelectContainer extends Component {
       });
     }
   }
-  componentWillUpdate() {
-  }
+  componentWillUpdate() {}
   apiShow() {
     let domThis = ReactDOM.findDOMNode(this);
     // domThis.classList.add('active');
@@ -41,7 +40,6 @@ class BmuiSelectContainer extends Component {
       domThis.style.opacity = 1;
       domThis.querySelector('.bmui-select-container__modal').style.transform = 'translateY(0)';
     }, 10);
-
 
     // this.setState({
     //   show: true,
@@ -86,7 +84,9 @@ class BmuiSelectContainer extends Component {
                 this.props.onCancel();
               }}
               className="col1"
-            >取消</div>
+            >
+              取消
+            </div>
             <div className="col2">{this.props.title}</div>
             <div
               onClick={() => {
@@ -94,13 +94,15 @@ class BmuiSelectContainer extends Component {
                 this.props.onOk();
               }}
               className="col3"
-            >确定</div>
+            >
+              确定
+            </div>
           </div>
           <div
             style={{
               height: this.props.contentHeight,
             }}
-            onTouchMove={e => {
+            onTouchMove={(e) => {
               e.stopPropagation();
             }}
             className="bmui-select-container__content"

@@ -8,7 +8,6 @@ import { AddressPicker, List } from 'components';
 import 'components/list/list.less';
 import 'components/address-picker/address-picker.less';
 
-
 class PageAddressPicker extends React.Component {
   constructor(props) {
     super(props);
@@ -17,9 +16,7 @@ class PageAddressPicker extends React.Component {
       value: AddressPicker.defaultValue,
     };
   }
-  componentDidMount() {
-
-  }
+  componentDidMount() {}
   render() {
     return (
       <div>
@@ -59,6 +56,5 @@ class PageAddressPicker extends React.Component {
     );
   }
 }
-PageAddressPicker.propTypes = {
-};
+PageAddressPicker.propTypes = {};
 export default PageAddressPicker;

@@ -30,8 +30,7 @@ class BmuiSelect extends Component {
       });
     }
   }
-  componentWillUpdate() {
-  }
+  componentWillUpdate() {}
   apiShow() {
     this.apiBuiSelectContainerApi.apiShow();
     this.setState({
@@ -55,16 +54,15 @@ class BmuiSelect extends Component {
           this.apiBuiSelectContainerApi = api;
         }}
       >
-          <BmuiSelectColumn
-            options={this.props.options}
-            value={this.state.value}
-            onChange={(value, selected) => {
-              this.setState({
-                value,
-              });
-            }}
-          />
-        
+        <BmuiSelectColumn
+          options={this.props.options}
+          value={this.state.value}
+          onChange={(value, selected) => {
+            this.setState({
+              value,
+            });
+          }}
+        />
       </BmuiSelectContainer>
     );
   }
@@ -74,10 +72,7 @@ BmuiSelect.propTypes = {
   api: PropTypes.func,
   onChange: PropTypes.func,
   title: PropTypes.string,
-  value: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-  ]),
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 BmuiSelect.defaultProps = {
   name: 'default name',

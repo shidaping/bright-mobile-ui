@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 //     );
 //   }
 // }
-const Blank = function(props) {
+const Blank = function (props) {
   return props.children ? Children.only(props.children) : null;
 };
 Blank.propTypes = {

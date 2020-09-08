@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames'; 
+import classnames from 'classnames';
 
 class Tab extends Component {
   constructor(props) {
@@ -24,10 +24,8 @@ class Tab extends Component {
       }
     });
     return (
-      <div
-        className="bmui-tab"
-      >
-        {this.props.options.map(item => (
+      <div className="bmui-tab">
+        {this.props.options.map((item) => (
           <section
             className={classnames('', {
               active: item.value === this.state.value,
@@ -61,10 +59,12 @@ Tab.propTypes = {
 
 Tab.defaultProps = {
   value: '',
-  options: [{
-    text: 'abc',
-    value: 0,
-  }],
+  options: [
+    {
+      text: 'abc',
+      value: 0,
+    },
+  ],
   onChange: () => {},
 };
 

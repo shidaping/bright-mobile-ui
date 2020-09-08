@@ -1,7 +1,5 @@
 import React from 'react';
-const NotFound = function() {
-  return (
-    <div>404, not found</div>
-  );
+const NotFound = function () {
+  return <div>404, not found</div>;
 };
 export default NotFound;

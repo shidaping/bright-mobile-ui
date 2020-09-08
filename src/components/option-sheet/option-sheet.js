@@ -35,7 +35,6 @@ class OptionSheet extends Component {
       domThis.querySelector('.bmui-option-sheet__modal').style.transform = 'translateY(0)';
     }, 10);
 
-
     // this.setState({
     //   show: true,
     // });
@@ -59,17 +58,14 @@ class OptionSheet extends Component {
   }
   render() {
     return (
-      <div
-        className="bmui-option-sheet bmui-mask"
-        onClick={this.apiHide}
-      >
+      <div className="bmui-option-sheet bmui-mask" onClick={this.apiHide}>
         <div
           onClick={(e) => {
             e.stopPropagation();
           }}
           className="bmui-option-sheet__modal"
         >
-          {this.props.options.map(item => (
+          {this.props.options.map((item) => (
             <button
               className={classnames('', {
                 danger: item.theme === 'danger',
@@ -79,8 +75,9 @@ class OptionSheet extends Component {
               {item.text}
             </button>
           ))}
-          <button className="btn-cancel" onClick={this.apiHide}>取消</button>
-
+          <button className="btn-cancel" onClick={this.apiHide}>
+            取消
+          </button>
         </div>
       </div>
     );

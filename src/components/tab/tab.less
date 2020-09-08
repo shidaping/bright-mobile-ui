@@ -2,25 +2,25 @@
 .bmui-tab {
   display: flex;
   position: relative;
-  &>section{
+  & > section {
     flex: 1;
     text-align: center;
     line-height: 30px;
     border-top: 1px solid @color-border;
     border-right: 1px solid @color-border;
     border-bottom: 1px solid @color-border;
-    &.active{
+    &.active {
       color: @color-blue;
     }
-    &:last-child{
+    &:last-child {
       border-right: none;
     }
   }
-  .slide{
+  .slide {
     display: block;
     position: absolute;
     left: 0;
-    transition: left .3s ease;
+    transition: left 0.3s ease;
     bottom: 0;
     background: @color-blue;
     height: 2px;

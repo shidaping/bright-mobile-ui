@@ -21,20 +21,26 @@ class Stepper extends Component {
   onMinus() {
     const { value } = this.state;
     const newValue = value - this.props.step;
-    this.setState({
-      value: newValue,
-    }, () => {
-      this.props.onChange(newValue);
-    });
+    this.setState(
+      {
+        value: newValue,
+      },
+      () => {
+        this.props.onChange(newValue);
+      }
+    );
   }
   onAdd() {
     const { value } = this.state;
     const newValue = value + this.props.step;
-    this.setState({
-      value: newValue,
-    }, () => {
-      this.props.onChange(newValue);
-    });
+    this.setState(
+      {
+        value: newValue,
+      },
+      () => {
+        this.props.onChange(newValue);
+      }
+    );
   }
   render() {
     return (
@@ -46,7 +52,9 @@ class Stepper extends Component {
         <button
           onClick={this.onMinus}
           disabled={this.props.disabled || this.state.value <= this.props.min}
-        >-</button>
+        >
+          -
+        </button>
         <input
           value={this.state.value}
           onChange={(e) => {
@@ -61,8 +69,10 @@ class Stepper extends Component {
         />
         <button
           onClick={this.onAdd}
-          disabled={this.props.disabled || this.state.value >= this.props.max }
-        >+</button>
+          disabled={this.props.disabled || this.state.value >= this.props.max}
+        >
+          +
+        </button>
       </div>
     );
   }
@@ -75,7 +85,6 @@ Stepper.propTypes = {
   min: PropTypes.number,
   step: PropTypes.number,
   onChange: PropTypes.func,
-
 };
 
 Stepper.defaultProps = {

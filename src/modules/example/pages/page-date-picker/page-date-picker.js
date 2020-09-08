@@ -8,11 +8,10 @@ import { DatePicker, List } from 'components';
 import 'components/list/list.less';
 import 'components/date-picker/date-picker.less';
 
-
 const map = {
-  'male': '男',
-  'female': '女',
-}
+  male: '男',
+  female: '女',
+};
 
 const options = [
   {
@@ -22,8 +21,8 @@ const options = [
   {
     text: '女',
     value: 'female',
-  } 
-]
+  },
+];
 
 class PageDatePicker extends React.Component {
   constructor(props) {
@@ -33,9 +32,7 @@ class PageDatePicker extends React.Component {
       value: '1980-09-21 12:00:34',
     };
   }
-  componentDidMount() {
-
-  }
+  componentDidMount() {}
   render() {
     return (
       <div>
@@ -82,6 +79,5 @@ class PageDatePicker extends React.Component {
     );
   }
 }
-PageDatePicker.propTypes = {
-};
+PageDatePicker.propTypes = {};
 export default PageDatePicker;

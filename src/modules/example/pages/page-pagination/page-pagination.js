@@ -6,9 +6,8 @@ import { Pagination, List } from 'components';
 import 'components/list/list.less';
 // import 'components/bmui-select/bmui-select.less';
 
-
 class PagePagination extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       boolShow: false,
@@ -17,9 +16,7 @@ class PagePagination extends React.Component {
       total: 26,
     };
   }
-  componentDidMount() {
-
-  }
+  componentDidMount() {}
   render() {
     return (
       <div>
@@ -32,11 +29,9 @@ class PagePagination extends React.Component {
           }}
           currentPage={this.state.currentPage}
         />
-
       </div>
     );
   }
 }
-PagePagination.propTypes = {
-};
+PagePagination.propTypes = {};
 export default PagePagination;

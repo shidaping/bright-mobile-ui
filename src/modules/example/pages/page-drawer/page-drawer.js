@@ -14,9 +14,7 @@ class PageDrawer extends React.Component {
       boolShowPassword: false,
     };
   }
-  componentDidMount() {
-
-  }
+  componentDidMount() {}
   render() {
     return (
       <div>
@@ -27,7 +25,7 @@ class PageDrawer extends React.Component {
             }}
             className="btn btn-orange btn-full"
           >
-          打开抽屉
+            打开抽屉
           </button>
         </div>
 
@@ -44,24 +42,18 @@ class PageDrawer extends React.Component {
               noValue
               label="仅链接"
             />
-            <List.Item
-              label="输入"
-              hideRight
-            >
+            <List.Item label="输入" hideRight>
               <input
                 onChange={(e) => {
                   this.setState({
                     value: e.target.value,
-                  })
+                  });
                 }}
                 placeholder="请输入"
                 value={this.state.value}
               />
             </List.Item>
-            <List.Item
-              label="输入"
-              hideRight
-            >
+            <List.Item label="输入" hideRight>
               很久以前有一个神仙，他的名字叫孙悟空
             </List.Item>
           </List>

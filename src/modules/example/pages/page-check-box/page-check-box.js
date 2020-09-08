@@ -13,9 +13,7 @@ class PageCheckBox extends React.Component {
       value: '',
     };
   }
-  componentDidMount() {
-
-  }
+  componentDidMount() {}
   render() {
     return (
       <div
@@ -27,9 +25,7 @@ class PageCheckBox extends React.Component {
         className="display-flex"
         style={{ padding: 10 }}
       >
-        <CheckBox
-          active={this.state.active}
-        />
+        <CheckBox active={this.state.active} />
         &nbsp;复选框示例
       </div>
     );

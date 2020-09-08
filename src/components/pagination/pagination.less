@@ -1,34 +1,35 @@
 @import '~components/style/var.less';
-.bmui-pagination{
+.bmui-pagination {
   margin: 10px auto;
   display: flex;
   width: 180px;
   align-items: center;
   line-height: 30px;
-  background:white;
-  .col1,.col3{
+  background: white;
+  .col1,
+  .col3 {
     flex: 0 60px;
     border: 1px solid @color-blue;
     line-height: 30px;
     background: none;
     color: @color-blue;
 
-    &:disabled{
+    &:disabled {
       color: @color-grey;
     }
   }
-  .col1{
+  .col1 {
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
   }
-  .col2{
+  .col2 {
     flex: 1;
     text-align: center;
     line-height: 30px;
     border-top: 1px solid @color-blue;
     border-bottom: 1px solid @color-blue;
   }
-  .col3{
+  .col3 {
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
   }

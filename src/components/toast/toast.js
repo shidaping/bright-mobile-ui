@@ -22,13 +22,14 @@ class Toast extends Component {
       >
         {children}
       </Toast>,
-      dom);
+      dom
+    );
     apiToast.apiShow(children);
   }
   static success(children, props) {
     this.show(children, { ...props, type: 'success' });
   }
-  static error(children, props){
+  static error(children, props) {
     this.show(children, { ...props, type: 'error' });
   }
   static hide() {

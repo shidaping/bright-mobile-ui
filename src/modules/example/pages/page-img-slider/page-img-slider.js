@@ -39,20 +39,17 @@ const items = [
 ];
 
 class PageImgSlider extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       boolShow: false,
       value: '',
     };
   }
-  componentDidMount() {
-
-  }
+  componentDidMount() {}
   render() {
     return (
-      <div
-      >
+      <div>
         <ImgSlider items={items} />
       </div>
     );

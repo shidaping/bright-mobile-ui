@@ -8,7 +8,6 @@ import { List, Switch } from 'components';
 import 'components/list/list.less';
 import 'components/switch/switch.less';
 
-
 class PageRadio extends React.Component {
   constructor(props) {
     super(props);
@@ -17,9 +16,7 @@ class PageRadio extends React.Component {
       value: '',
     };
   }
-  componentDidMount() {
-
-  }
+  componentDidMount() {}
   render() {
     return (
       <List>
@@ -35,7 +32,6 @@ class PageRadio extends React.Component {
         </List.Item>
         {this.state.checked ? '打开' : '关闭'}
       </List>
-
     );
   }
 }

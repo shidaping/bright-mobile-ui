@@ -20,7 +20,8 @@ class BmuiConfirm extends Component {
           apiToast = api;
         }}
       />,
-      dom);
+      dom
+    );
     setTimeout(() => {
       apiToast.apiShow();
     }, 100);
@@ -94,11 +95,14 @@ class BmuiConfirm extends Component {
             {this.props.showCancel ? (
               <button
                 onClick={() => {
-                  this.setState({
-                    show: false,
-                  }, () => {
-                    this.props.onCancel();
-                  });
+                  this.setState(
+                    {
+                      show: false,
+                    },
+                    () => {
+                      this.props.onCancel();
+                    }
+                  );
                 }}
                 className="cancel"
               >
@@ -107,15 +111,19 @@ class BmuiConfirm extends Component {
             ) : null}
             <button
               onClick={() => {
-                this.setState({
-                  show: false,
-                }, () => {
-                  this.props.onOk();
-                });
+                this.setState(
+                  {
+                    show: false,
+                  },
+                  () => {
+                    this.props.onOk();
+                  }
+                );
               }}
               className="ok"
             >
-              {this.props.okText}</button>
+              {this.props.okText}
+            </button>
           </div>
         </div>
       </div>

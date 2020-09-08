@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-
 class CheckBox extends Component {
   constructor(props) {
     super(props);

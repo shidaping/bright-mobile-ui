@@ -1,5 +1,5 @@
 @import '~components/style/var.less';
-.bmui-img-slider{
+.bmui-img-slider {
   width: 300px;
   height: 150px;
   overflow-x: hidden;
@@ -7,7 +7,7 @@
   white-space: nowrap;
   background: black;
   position: relative;
-  &.big{
+  &.big {
     position: fixed;
     height: 100% !important;
     width: 100% !important;
@@ -15,28 +15,28 @@
     top: 0;
     z-index: 2001;
   }
-  .content{
+  .content {
     height: 100%;
     width: 100%;
-    &>section{
+    & > section {
       display: inline-flex;
       height: 100%;
       width: 100%;
       justify-content: center;
       align-items: center;
-      img{
+      img {
         max-height: 100%;
         max-width: 100%;
       }
     }
   }
-  .bubble-list{
+  .bubble-list {
     position: absolute;
     z-index: 2;
     left: 50%;
     bottom: 10px;
     transform: translateX(-50%);
-    &>li{
+    & > li {
       border-radius: 10px;
       height: 10px;
       width: 10px;
@@ -44,14 +44,12 @@
       display: inline-block;
       margin-left: 5px;
       border: 1px solid @color-orange;
-      &:first-child{
+      &:first-child {
         margin-left: 0;
       }
-      &.active{
+      &.active {
         background: @color-orange;
       }
     }
   }
-
-
 }

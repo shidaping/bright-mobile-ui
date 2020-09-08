@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom';
 import isEqual from 'lodash/isEqual';
 // import './bmui-select-column.less';
 
-
 class BuiSelectColumn extends Component {
   constructor(props) {
     super(props);
@@ -133,14 +132,16 @@ class BuiSelectColumn extends Component {
     let index;
     // const touchEnd = e.touches[0];
     // const touchStart = this.touchStart;
-    const translateYStart  = this.translateYStart;
+    const translateYStart = this.translateYStart;
     const translateYEnd = this.translateY;
     const options = this.state.options;
 
     domContent.style.transition = 'all ease .5s';
     // console.log((translateYEnd - translateYStart) / (now.getTime() - this.startTime.getTime()), '======');
 
-    if (Math.abs((translateYEnd - translateYStart) / (now.getTime() - this.startTime.getTime())) > 0.5) {
+    if (
+      Math.abs((translateYEnd - translateYStart) / (now.getTime() - this.startTime.getTime())) > 0.5
+    ) {
       this.translateY = this.translateY + (translateYEnd - translateYStart) * 2;
       domContent.style.transform = `translateY(${this.translateY}px)`;
     }
@@ -148,8 +149,8 @@ class BuiSelectColumn extends Component {
       this.translateY = 0;
       domContent.style.transform = 'translateY(0px)';
       index = 0;
-    } else if (this.translateY + (30 * options.length) < 0 ) {
-      this.translateY = 30 - (30 * options.length);
+    } else if (this.translateY + 30 * options.length < 0) {
+      this.translateY = 30 - 30 * options.length;
       domContent.style.transform = `translateY(${this.translateY}px)`;
       index = options.length - 1;
     } else {
@@ -187,7 +188,7 @@ class BuiSelectColumn extends Component {
             transform: `translateY(${translateY}px)`,
           }}
         >
-          {this.state.options.map(item => (
+          {this.state.options.map((item) => (
             <li key={item[this.props.valueField]}>{item[this.props.textField]}</li>
           ))}
         </ul>
@@ -206,10 +207,7 @@ BuiSelectColumn.propTypes = {
   textField: PropTypes.string,
   valueField: PropTypes.string,
   onChange: PropTypes.func,
-  value: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-  ]),
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 BuiSelectColumn.defaultProps = {
   textField: 'text',

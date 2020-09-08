@@ -38,8 +38,7 @@ class AddressPicker extends Component {
       });
     }
   }
-  componentWillUpdate() {
-  }
+  componentWillUpdate() {}
   apiShow(value) {
     this.apiBuiSelectContainerApi.apiShow();
     this.setState({
@@ -54,9 +53,11 @@ class AddressPicker extends Component {
   }
 
   render() {
-    const selectedProvince = data.find(item => item.code === this.state.value.provinceCode) || data[0];
+    const selectedProvince =
+      data.find((item) => item.code === this.state.value.provinceCode) || data[0];
     const optionsCity = selectedProvince.children || [];
-    const selectedCity = optionsCity.find(item => item.code === this.state.value.cityCode) || optionsCity[0];
+    const selectedCity =
+      optionsCity.find((item) => item.code === this.state.value.cityCode) || optionsCity[0];
     const optionsArea = selectedCity.children || [];
     return (
       <BmuiSelectContainer
@@ -82,11 +83,14 @@ class AddressPicker extends Component {
               areaCode: item.children[0].children[0].code,
               areaName: item.children[0].children[0].name,
             };
-            this.setState({
-              value: newValue,
-            }, () => {
-              this.props.onChange(newValue);
-            });
+            this.setState(
+              {
+                value: newValue,
+              },
+              () => {
+                this.props.onChange(newValue);
+              }
+            );
           }}
         />
         <BmuiSelectColumn
@@ -102,11 +106,14 @@ class AddressPicker extends Component {
               areaCode: item.children[0].code,
               areaName: item.children[0].name,
             };
-            this.setState({
-              value: newValue,
-            }, () => {
-              this.props.onChange(newValue);
-            });
+            this.setState(
+              {
+                value: newValue,
+              },
+              () => {
+                this.props.onChange(newValue);
+              }
+            );
           }}
         />
         <BmuiSelectColumn
@@ -120,14 +127,16 @@ class AddressPicker extends Component {
               areaCode: item.code,
               areaName: item.name,
             };
-            this.setState({
-              value: newValue,
-            }, () => {
-              this.props.onChange(newValue);
-            });
+            this.setState(
+              {
+                value: newValue,
+              },
+              () => {
+                this.props.onChange(newValue);
+              }
+            );
           }}
         />
-
       </BmuiSelectContainer>
     );
   }
@@ -138,7 +147,6 @@ AddressPicker.propTypes = {
   onOk: PropTypes.func,
   title: PropTypes.string,
   value: PropTypes.object,
-
 };
 AddressPicker.defaultProps = {
   title: '请选择地区',

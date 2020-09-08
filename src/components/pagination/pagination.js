@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-
 class Pagination extends Component {
   constructor(props) {
     super(props);
@@ -34,15 +33,21 @@ class Pagination extends Component {
           }}
           disabled={currentPage < 2}
           className="col1"
-        >上一页</button>
-        <span className="col2">{currentPage}/{pageTotal}</span>
+        >
+          上一页
+        </button>
+        <span className="col2">
+          {currentPage}/{pageTotal}
+        </span>
         <button
           onClick={() => {
             this.props.onChange(currentPage + 1);
           }}
           disabled={currentPage >= pageTotal}
           className="col3"
-        >下一页</button>
+        >
+          下一页
+        </button>
       </div>
     );
   }

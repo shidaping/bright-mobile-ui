@@ -18,120 +18,101 @@ see: http://stackoverflow.com/questions/36194806/invariant-violation-the-root-ro
 */
 const rootRoute = {
   path: '/',
-  component: require('modules/example/components/main').default,  // eslint-disable-line global-require
+  component: require('modules/example/components/main').default, // eslint-disable-line global-require
   indexRoute: {
-    component: require( // eslint-disable-line global-require
-      'modules/example/pages/home' // eslint-disable-line
-    ).default,
+    component: require(// eslint-disable-line global-require
+    'modules/example/pages/home').default, // eslint-disable-line
   },
   childRoutes: [
     {
       path: 'toast',
-      component: require( // eslint-disable-line global-require
-        'modules/example/pages/page-toast' // eslint-disable-line
-      ).default,
+      component: require(// eslint-disable-line global-require
+      'modules/example/pages/page-toast').default, // eslint-disable-line
     },
     {
       path: 'loading',
-      component: require( // eslint-disable-line global-require
-        'modules/example/pages/page-loading' // eslint-disable-line
-      ).default,
+      component: require(// eslint-disable-line global-require
+      'modules/example/pages/page-loading').default, // eslint-disable-line
     },
     {
       path: 'confirm',
-      component: require( // eslint-disable-line global-require
-        'modules/example/pages/page-confirm' // eslint-disable-line
-      ).default,
+      component: require(// eslint-disable-line global-require
+      'modules/example/pages/page-confirm').default, // eslint-disable-line
     },
     {
       path: 'form',
-      component: require( // eslint-disable-line global-require
-        'modules/example/pages/page-form' // eslint-disable-line
-      ).default,
+      component: require(// eslint-disable-line global-require
+      'modules/example/pages/page-form').default, // eslint-disable-line
     },
     {
       path: 'select',
-      component: require( // eslint-disable-line global-require
-        'modules/example/pages/page-select' // eslint-disable-line
-      ).default,
+      component: require(// eslint-disable-line global-require
+      'modules/example/pages/page-select').default, // eslint-disable-line
     },
     {
       path: 'date-picker',
-      component: require( // eslint-disable-line global-require
-        'modules/example/pages/page-date-picker' // eslint-disable-line
-      ).default,
+      component: require(// eslint-disable-line global-require
+      'modules/example/pages/page-date-picker').default, // eslint-disable-line
     },
     {
       path: 'address-picker',
-      component: require( // eslint-disable-line global-require
-        'modules/example/pages/page-address-picker' // eslint-disable-line
-      ).default,
+      component: require(// eslint-disable-line global-require
+      'modules/example/pages/page-address-picker').default, // eslint-disable-line
     },
     {
       path: 'check-box',
-      component: require( // eslint-disable-line global-require
-        'modules/example/pages/page-check-box' // eslint-disable-line
-      ).default,
+      component: require(// eslint-disable-line global-require
+      'modules/example/pages/page-check-box').default, // eslint-disable-line
     },
     {
       path: 'radio',
-      component: require( // eslint-disable-line global-require
-        'modules/example/pages/page-radio' // eslint-disable-line
-      ).default,
+      component: require(// eslint-disable-line global-require
+      'modules/example/pages/page-radio').default, // eslint-disable-line
     },
     {
       path: 'switch',
-      component: require( // eslint-disable-line global-require
-        'modules/example/pages/page-switch' // eslint-disable-line
-      ).default,
+      component: require(// eslint-disable-line global-require
+      'modules/example/pages/page-switch').default, // eslint-disable-line
     },
     {
       path: 'img-slider',
-      component: require( // eslint-disable-line global-require
-        'modules/example/pages/page-img-slider' // eslint-disable-line
-      ).default,
+      component: require(// eslint-disable-line global-require
+      'modules/example/pages/page-img-slider').default, // eslint-disable-line
     },
     {
       path: 'list',
-      component: require( // eslint-disable-line global-require
-        'modules/example/pages/page-list' // eslint-disable-line
-      ).default,
+      component: require(// eslint-disable-line global-require
+      'modules/example/pages/page-list').default, // eslint-disable-line
     },
     {
       path: 'drawer',
-      component: require( // eslint-disable-line global-require
-        'modules/example/pages/page-drawer' // eslint-disable-line
-      ).default,
+      component: require(// eslint-disable-line global-require
+      'modules/example/pages/page-drawer').default, // eslint-disable-line
     },
     {
       path: 'pagination',
-      component: require( // eslint-disable-line global-require
-        'modules/example/pages/page-pagination' // eslint-disable-line
-      ).default,
+      component: require(// eslint-disable-line global-require
+      'modules/example/pages/page-pagination').default, // eslint-disable-line
     },
     {
       path: 'option-sheet',
-      component: require( // eslint-disable-line global-require
-        'modules/example/pages/page-option-sheet' // eslint-disable-line
-      ).default,
+      component: require(// eslint-disable-line global-require
+      'modules/example/pages/page-option-sheet').default, // eslint-disable-line
     },
     {
       path: 'stepper',
-      component: require( // eslint-disable-line global-require
-        'modules/example/pages/page-stepper' // eslint-disable-line
-      ).default,
+      component: require(// eslint-disable-line global-require
+      'modules/example/pages/page-stepper').default, // eslint-disable-line
     },
     {
       path: 'tab',
-      component: require( // eslint-disable-line global-require
-        'modules/example/pages/page-tab' // eslint-disable-line
-      ).default,
+      component: require(// eslint-disable-line global-require
+      'modules/example/pages/page-tab').default, // eslint-disable-line
     },
     {
       path: '*',
-      component: require( // eslint-disable-line global-require
-        'modules/error/components/not-found.js' // eslint-disable-line
-      ).default,
+      component: require(// eslint-disable-line global-require
+      'modules/error/components/not-found.js').default, // eslint-disable-line
     },
   ],
 };

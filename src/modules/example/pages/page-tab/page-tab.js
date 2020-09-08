@@ -6,7 +6,6 @@ import { Tab } from 'components';
 import 'components/list/list.less';
 // import 'components/bmui-select/bmui-select.less';
 
-
 class PageTab extends React.Component {
   constructor(props) {
     super(props);
@@ -14,9 +13,7 @@ class PageTab extends React.Component {
       value: 'complete',
     };
   }
-  componentDidMount() {
-
-  }
+  componentDidMount() {}
   render() {
     const options = [
       {
@@ -47,11 +44,9 @@ class PageTab extends React.Component {
             });
           }}
         />
-
       </div>
     );
   }
 }
-PageTab.propTypes = {
-};
+PageTab.propTypes = {};
 export default PageTab;
